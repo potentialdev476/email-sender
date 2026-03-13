@@ -1,0 +1,59 @@
+{
+  "smtp": {
+    "host": "mail.privateemail.com",
+    "port": 465,
+    "username": "nickhart@upland.land",
+    "password": "AXE65critical#DAMAGE^coming!HERE",
+    "fromName": "",
+    "useTLS": false,
+    "signature": "<table style=\"font-family: Arial, sans-serif; font-size: 14px; line-height: 1.4; height: 133px;\" width=\"430\">\n<tbody>\n<tr>\n<td style=\"padding-right: 15px; vertical-align: middle;\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://akashx-assets.s3.us-east-2.amazonaws.com/tmp/logo.png\" alt=\"Upland Logo\" width=\"122\" height=\"122\" /></td>\n<td style=\"border-left: 2px solid #cccccc; padding-left: 15px;\"><span style=\"font-family: 'trebuchet ms', geneva;\"><strong style=\"font-size: 15px;\">Nick Hart</strong></span><br /><span style=\"font-family: 'trebuchet ms', geneva;\">HR Manager at <a href=\"https://upland.me/\"><strong>Upland</strong></a></span><br /><span style=\"font-family: 'trebuchet ms', geneva;\">Blockchain Metaverse Platform</span><br /><br /><span style=\"font-family: 'trebuchet ms', geneva;\">📩 nickhart@upland.land</span><br /><span style=\"font-family: 'trebuchet ms', geneva;\">🔗 LinkedIn: <a href=\"https://www.linkedin.com/in/nick-hart-11b62779/\">in/nick-hart</a></span></td>\n</tr>\n</tbody>\n</table>"
+  },
+  "categories": [
+    {
+      "id": "mmozvy2tu0dvm",
+      "name": "Upland-first-try"
+    }
+  ],
+  "templates": [
+    {
+      "id": "mmozz7ewdeex4",
+      "categoryId": "mmozvy2tu0dvm",
+      "name": "Template 1 — Friendly & Chatty",
+      "subject": "Hi {{name}}, Join the Upland Team!",
+      "body": "Hi {{name}},\n\nI found your profile on DoraHacks and thought you might be interested in something we’re building at Upland.\nWe currently have a few open roles — Blockchain Engineer, Full Stack Engineer, and Project Manager.\n\nYou can check out the details and apply here:\nhttps://forms.gle/GRDaJUGbWdJdnZuN7\n\nThe form includes the job descriptions and our whitepaper, so you can get a good idea of what we’re working on.\n\nIf you’re interested, feel free to apply through the form and I’ll reach out to you afterward.\nYou can also connect with me on LinkedIn if you'd like to stay in touch.\n\nCheers,\nNick"
+    },
+    {
+      "id": "mmp020j2fwqjn",
+      "categoryId": "mmozvy2tu0dvm",
+      "name": "Template 2 — Casual & Personal",
+      "subject": "Hi {{name}}, Upland is looking for awesome teammates",
+      "body": "Hi {{name}},\n\nI came across your profile on DoraHacks and wanted to share something we’re building at Upland.\nWe have a few roles open right now — Blockchain Engineer, Full Stack Engineer, and Project Manager.\n\nYou can see the role details and apply here:\nhttps://forms.gle/GRDaJUGbWdJdnZuN7\n\nThe form also includes our whitepaper if you'd like to learn more about the project.\nIf it looks interesting to you, go ahead and apply, and I’ll follow up with you after reviewing your application.\nYou're also welcome to connect with me on LinkedIn.\n\nBest,\nNick"
+    },
+    {
+      "id": "mmp0395bv3vwi",
+      "categoryId": "mmozvy2tu0dvm",
+      "name": "Template 3 — Ultra Short / Chatty",
+      "subject": "Hi {{name}}, Want to join Upland?",
+      "body": "Hey {{name}},\n\nI found your profile on DoraHacks and thought you might be interested in what we’re building at Upland.\nWe’re currently hiring for Blockchain Engineer, Full Stack Engineer, and Project Manager.\n\nAll the info and the application form are here:\nhttps://forms.gle/GRDaJUGbWdJdnZuN7\n\nIf you’re interested, just submit the form and I’ll get back to you after reviewing it.\nAnd if you'd like, we can also connect on LinkedIn.\n\nCheers,\nNick"
+    },
+    {
+      "id": "mmp05i9yvy5a7",
+      "categoryId": "mmozvy2tu0dvm",
+      "name": "Template 4 — Conversational / Project-Focused",
+      "subject": "Hi {{name}}, Web3 gaming roles at Upland",
+      "body": "Hi {{name}},\n\nI came across your DoraHacks profile and wanted to reach out.\nWe’re building some fun Web3 gaming projects at Upland, and we’re currently looking for people to join the team.\nOpen roles include Blockchain Engineer, Full Stack Engineer, and Project Manager.\n\nYou can find all the details and apply here:\nhttps://forms.gle/GRDaJUGbWdJdnZuN7\n\nThe form also includes the job descriptions and our whitepaper.\nIf the opportunity interests you, feel free to apply and I’ll reach out once I review your submission.\nYou can also connect with me on LinkedIn if you'd like to stay in touch.\n\nBest,\nNick"
+    },
+    {
+      "id": "mmp06j2nqac39",
+      "categoryId": "mmozvy2tu0dvm",
+      "name": "Template 5 — Casual Director Tone",
+      "subject": "Hi {{name}}, Join Upland – flexible roles available",
+      "body": "Hey {{name}},\n\nI came across your profile on DoraHacks and wanted to let you know about some opportunities at Upland.\nWe currently have openings for Blockchain Engineer, Full Stack Engineer, and Project Manager.\n\nYou can check out the role descriptions and apply here:\nhttps://forms.gle/GRDaJUGbWdJdnZuN7\n\nEverything is included in the form, including our whitepaper and more details about the project.\nIf it sounds like something you’d be interested in, feel free to apply and I’ll follow up with you after reviewing your application.\nYou're also welcome to connect with me on LinkedIn.\n\nCheers,\nNick"
+    }
+  ],
+  "emailList": [],
+  "selectedCategoryId": "mmozvy2tu0dvm",
+  "templateRotationIndex": 0,
+  "intervalSeconds": 10,
+  "currentIndex": 0
+}

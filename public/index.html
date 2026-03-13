@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>📧 Email Sender Bot</title>
+<style>
+  :root {
+    --bg:       #f1f5f9;
+    --surface:  #ffffff;
+    --surface2: #f8fafc;
+    --border:   #e2e8f0;
+    --accent:   #6366f1;
+    --accent-h: #4f46e5;
+    --green:    #16a34a;
+    --red:      #dc2626;
+    --yellow:   #d97706;
+    --text:     #1e293b;
+    --muted:    #64748b;
+    --radius:   12px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+  /* ── Header ── */
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 28px;
+    display: flex; align-items: center; gap: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06);
+    position: sticky; top: 0; z-index: 100;
+  }
+  header h1 { font-size: 1.2rem; font-weight: 700; }
+  .badge {
+    font-size: .72rem; padding: 2px 10px; border-radius: 99px; font-weight: 600;
+    background: #f1f5f9; color: var(--muted); border: 1px solid var(--border);
+  }
+  .badge.running { background: #dcfce7; color: #15803d; border-color: #86efac; }
+
+  /* ── Tabs ── */
+  .tabs {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    display: flex; padding: 0 20px; gap: 2px;
+    overflow-x: auto;
+  }
+  .tab-btn {
+    background: none; border: none; color: var(--muted);
+    padding: 13px 16px; font-size: .88rem; cursor: pointer;
+    border-bottom: 3px solid transparent; margin-bottom: -1px;
+    transition: color .15s, border-color .15s; font-weight: 500;
+    white-space: nowrap; display: flex; align-items: center; gap: 6px;
+  }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .main { max-width: 1100px; margin: 0 auto; padding: 28px 20px; }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* ── Cards ── */
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 22px; margin-bottom: 18px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.05);
+  }
+  .card-title {
+    font-size: .75rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .8px; color: var(--muted); margin-bottom: 16px;
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  /* ── Forms ── */
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .form-group { display: flex; flex-direction: column; gap: 5px; }
+  .form-group label { font-size: .8rem; color: var(--muted); font-weight: 600; }
+  input[type=text], input[type=number], input[type=email],
+  input[type=password], select, textarea {
+    background: #fff; border: 1px solid var(--border); border-radius: 8px;
+    color: var(--text); font-size: .88rem; padding: 8px 11px;
+    outline: none; transition: border-color .15s; width: 100%;
+    font-family: inherit;
+  }
+  input:focus, select:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px #6366f115; }
+  textarea { resize: vertical; min-height: 110px; }
+  select { cursor: pointer; }
+
+  .toggle-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; }
+  .toggle { position: relative; display: inline-block; width: 42px; height: 23px; }
+  .toggle input { opacity: 0; width: 0; height: 0; }
+  .slider {
+    position: absolute; inset: 0; background: #cbd5e1;
+    border-radius: 99px; cursor: pointer; transition: .2s;
+  }
+  .slider:before {
+    content: ''; position: absolute; width: 15px; height: 15px;
+    left: 4px; top: 4px; background: #fff; border-radius: 50%; transition: .2s;
+  }
+  .toggle input:checked + .slider { background: var(--accent); }
+  .toggle input:checked + .slider:before { transform: translateX(19px); }
+
+  /* ── Buttons ── */
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 16px; border-radius: 8px; font-size: .86rem;
+    font-weight: 600; cursor: pointer; border: none;
+    transition: opacity .15s, transform .1s; font-family: inherit;
+  }
+  .btn:active { transform: scale(.97); }
+  .btn:disabled { opacity: .4; cursor: not-allowed; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover:not(:disabled) { background: var(--accent-h); }
+  .btn-success { background: #16a34a; color: #fff; }
+  .btn-success:hover:not(:disabled) { background: #15803d; }
+  .btn-danger  { background: #dc2626; color: #fff; }
+  .btn-danger:hover:not(:disabled)  { background: #b91c1c; }
+  .btn-ghost   { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+  .btn-ghost:hover:not(:disabled)   { border-color: var(--accent); color: var(--accent); }
+  .btn-sm { padding: 5px 10px; font-size: .78rem; }
+  .btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+
+  /* ── Stats ── */
+  .stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 18px; }
+  .stat-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 18px 16px; text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,.05);
+  }
+  .stat-card .val { font-size: 1.9rem; font-weight: 700; line-height: 1.1; }
+  .stat-card .lbl { font-size: .75rem; color: var(--muted); margin-top: 3px; font-weight: 500; }
+  .progress-bar-wrap { background: #e2e8f0; border-radius: 99px; height: 8px; overflow: hidden; margin: 12px 0 4px; }
+  .progress-bar { height: 100%; background: linear-gradient(90deg,var(--accent),var(--accent-h)); border-radius: 99px; transition: width .5s; }
+  .progress-label { font-size: .78rem; color: var(--muted); text-align: right; }
+
+  /* ── Info banner ── */
+  .info-banner {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 14px; border-radius: 8px; font-size: .86rem;
+    border: 1px solid var(--border); background: var(--surface2);
+    margin-bottom: 14px;
+  }
+  .info-banner.selected { background: #eef2ff; border-color: #c7d2fe; color: var(--accent-h); }
+  .info-banner.warning  { background: #fffbeb; border-color: #fde68a; color: var(--yellow); }
+
+  /* ── Drop zone ── */
+  .drop-zone {
+    border: 2px dashed var(--border); border-radius: var(--radius);
+    padding: 36px 20px; text-align: center; cursor: pointer;
+    transition: border-color .2s, background .2s; position: relative;
+  }
+  .drop-zone:hover, .drop-zone.drag-over { border-color: var(--accent); background: #eef2ff40; }
+  .drop-zone input[type=file] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
+  .drop-zone .dz-icon { font-size: 2.2rem; margin-bottom: 8px; }
+  .drop-zone p { color: var(--muted); font-size: .88rem; margin-top: 4px; }
+
+  /* ── Alert ── */
+  .alert { display: none; padding: 9px 13px; border-radius: 8px; font-size: .85rem; margin-top: 10px; font-weight: 500; }
+  .alert.show { display: flex; align-items: center; gap: 8px; }
+  .alert.ok  { background: #f0fdf4; border: 1px solid #86efac; color: #15803d; }
+  .alert.err { background: #fef2f2; border: 1px solid #fca5a5; color: #b91c1c; }
+
+  /* ── Two-panel layout (Templates tab) ── */
+  .two-panel { display: grid; grid-template-columns: 260px 1fr; gap: 16px; align-items: start; }
+  .panel-left, .panel-right {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,.05);
+  }
+  .panel-header {
+    padding: 13px 16px; border-bottom: 1px solid var(--border);
+    font-weight: 700; font-size: .82rem; text-transform: uppercase;
+    letter-spacing: .6px; color: var(--muted); display: flex;
+    align-items: center; justify-content: space-between;
+  }
+  .cat-item {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px; cursor: pointer; border-bottom: 1px solid #f1f5f9;
+    transition: background .1s;
+  }
+  .cat-item:hover { background: #f8fafc; }
+  .cat-item.active { background: #eef2ff; }
+  .cat-item .cat-name { flex: 1; font-size: .88rem; font-weight: 500; }
+  .cat-item .cat-count {
+    font-size: .72rem; background: #e0e7ff; color: var(--accent);
+    padding: 1px 7px; border-radius: 99px; font-weight: 600;
+  }
+  .cat-item .cat-actions { display: none; gap: 4px; }
+  .cat-item:hover .cat-actions { display: flex; }
+
+  /* ── Template cards ── */
+  .tpl-card {
+    border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px;
+    margin: 12px 16px; background: var(--surface2);
+    transition: border-color .15s;
+  }
+  .tpl-card:hover { border-color: #c7d2fe; }
+  .tpl-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+  .tpl-name { font-weight: 700; font-size: .9rem; color: var(--text); }
+  .tpl-subject { font-size: .8rem; color: var(--muted); margin: 5px 0 4px; }
+  .tpl-subject span { color: var(--text); }
+  .tpl-body-preview {
+    font-size: .78rem; color: var(--muted); background: #f1f5f9;
+    border-radius: 6px; padding: 6px 9px; margin-top: 6px;
+    white-space: pre-wrap; max-height: 60px; overflow: hidden;
+    position: relative;
+  }
+  .tpl-body-preview::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 20px; background: linear-gradient(transparent, #f1f5f9);
+  }
+  .tpl-actions { display: flex; gap: 6px; flex-shrink: 0; }
+
+  /* ── Inline form (add/edit template & category) ── */
+  .inline-form {
+    border: 1px solid #c7d2fe; border-radius: 10px; padding: 16px;
+    margin: 12px 16px; background: #eef2ff;
+  }
+  .inline-form .form-title { font-weight: 700; font-size: .9rem; color: var(--accent-h); margin-bottom: 12px; }
+  .inline-form .form-group { margin-bottom: 10px; }
+  .inline-form input, .inline-form textarea { background: #fff; }
+  .inline-form .btn-row { margin-top: 10px; }
+
+  /* ── Category inline edit ── */
+  .cat-edit-row {
+    display: flex; gap: 6px; align-items: center;
+    padding: 8px 10px; border-bottom: 1px solid #f1f5f9;
+    background: #eef2ff;
+  }
+  .cat-edit-row input { flex: 1; padding: 6px 10px; font-size: .86rem; }
+
+  /* ── Table ── */
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+  th {
+    background: #f8fafc; color: var(--muted); font-weight: 600;
+    padding: 9px 13px; text-align: left; border-bottom: 1px solid var(--border);
+    font-size: .75rem; text-transform: uppercase; letter-spacing: .5px;
+  }
+  td { padding: 9px 13px; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f8fafc; }
+  .badge-sent    { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; border-radius: 99px; padding: 1px 9px; font-size: .73rem; }
+  .badge-pending { background: #ede9fe; color: #6d28d9; border: 1px solid #ddd6fe; border-radius: 99px; padding: 1px 9px; font-size: .73rem; }
+
+  /* ── Logs ── */
+  .log-list { display: flex; flex-direction: column; gap: 5px; max-height: 500px; overflow-y: auto; padding-right: 4px; }
+  .log-list::-webkit-scrollbar { width: 5px; }
+  .log-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  .log-entry {
+    display: flex; gap: 10px; align-items: flex-start;
+    padding: 7px 11px; border-radius: 8px; font-size: .83rem;
+    background: #f8fafc; border: 1px solid var(--border);
+    animation: fadeIn .25s ease;
+  }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(-3px); } to { opacity:1; transform:translateY(0); } }
+  .log-entry.success { background: #f0fdf4; border-color: #bbf7d0; }
+  .log-entry.error   { background: #fef2f2; border-color: #fecaca; }
+  .log-entry .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+  .log-entry.info    .dot { background: #60a5fa; }
+  .log-entry.success .dot { background: var(--green); }
+  .log-entry.error   .dot { background: var(--red); }
+  .log-entry .ts { color: var(--muted); flex-shrink: 0; font-size: .76rem; white-space: nowrap; }
+  .log-entry .msg { flex: 1; word-break: break-word; }
+  .log-entry.success .msg { color: #15803d; }
+  .log-entry.error   .msg { color: #b91c1c; }
+
+  /* ── Countdown ── */
+  #countdown { font-size: 1.05rem; font-weight: 700; color: var(--accent); }
+
+  /* ── Empty state ── */
+  .empty-state { text-align: center; padding: 40px 20px; color: var(--muted); }
+  .empty-state .empty-icon { font-size: 2.5rem; margin-bottom: 10px; }
+  .empty-state p { font-size: .88rem; }
+
+  @media(max-width: 700px) {
+    .two-panel { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .grid2 { grid-template-columns: 1fr; }
+    header { padding: 12px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span style="font-size:1.5rem">📧</span>
+  <h1>Email Sender Bot</h1>
+  <span class="badge" id="statusBadge">● Idle</span>
+  <span style="margin-left:auto;color:var(--muted);font-size:.8rem">localhost:3000</span>
+</header>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="dashboard">📊 Dashboard</button>
+  <button class="tab-btn" data-tab="smtp">⚙️ SMTP</button>
+  <button class="tab-btn" data-tab="templates">📁 Templates</button>
+  <button class="tab-btn" data-tab="recipients">👥 Recipients</button>
+  <button class="tab-btn" data-tab="logs">📋 Logs</button>
+</nav>
+
+<div class="main">
+
+  <!-- ══════════════ DASHBOARD ══════════════ -->
+  <div class="tab-panel active" id="tab-dashboard">
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="val" id="statTotal">–</div>
+        <div class="lbl">Total Recipients</div>
+      </div>
+      <div class="stat-card">
+        <div class="val" style="color:var(--green)" id="statSent">–</div>
+        <div class="lbl">Sent</div>
+      </div>
+      <div class="stat-card">
+        <div class="val" style="color:var(--yellow)" id="statRemaining">–</div>
+        <div class="lbl">Remaining</div>
+      </div>
+      <div class="stat-card">
+        <div class="val" style="color:var(--accent)" id="statTemplates">–</div>
+        <div class="lbl">Templates (active)</div>
+      </div>
+    </div>
+
+    <!-- Resume banner (shown after crash/restart with unfinished job) -->
+    <div class="info-banner" id="resumeBanner" style="display:none;background:#fffbeb;border-color:#fde68a;color:#92400e">
+      <span>⚡</span>
+      <span id="resumeText"></span>
+      <button class="btn btn-sm" style="background:#d97706;color:#fff;margin-left:auto" onclick="startScheduler()">▶ Resume Sending</button>
+    </div>
+
+    <!-- Category banner -->
+    <div class="info-banner selected" id="catBanner" style="display:none">
+      <span>📁</span>
+      <span id="catBannerText"></span>
+    </div>
+    <div class="info-banner warning" id="noCatBanner">
+      <span>⚠️</span>
+      <span>No category selected — go to <strong>Recipients</strong> tab to select one.</span>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📈 Progress</div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar" id="progressBar" style="width:0%"></div>
+      </div>
+      <div class="progress-label" id="progressLabel">0 / 0</div>
+
+      <div style="margin-top:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <div>
+          <div style="font-size:.75rem;color:var(--muted);margin-bottom:3px;font-weight:600">NEXT SEND IN</div>
+          <div id="countdown">–</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="font-size:.75rem;color:var(--muted);font-weight:600">INTERVAL (SEC)</div>
+          <input type="number" id="dashInterval" min="1" value="30"
+            style="width:70px;padding:6px 8px;font-size:.88rem" onchange="saveInterval()" />
+        </div>
+        <div style="flex:1"></div>
+        <button class="btn btn-success" id="btnStart" onclick="startScheduler()">▶ Start</button>
+        <button class="btn btn-danger"  id="btnStop"  onclick="stopScheduler()" disabled>⏹ Stop</button>
+        <button class="btn btn-ghost"               onclick="clearRecipients()">🗑 Clear Recipients</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🕒 Recent Activity</div>
+      <div class="log-list" id="dashLogs" style="max-height:240px"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════ SMTP ══════════════ -->
+  <div class="tab-panel" id="tab-smtp">
+    <div class="card">
+      <div class="card-title">⚙️ SMTP Configuration</div>
+      <div class="grid2" style="margin-bottom:13px">
+        <div class="form-group">
+          <label>SMTP Host</label>
+          <input id="smtpHost" type="text" placeholder="mail.privateemail.com" />
+        </div>
+        <div class="form-group">
+          <label>Port</label>
+          <input id="smtpPort" type="number" value="465" />
+        </div>
+      </div>
+      <div class="grid2" style="margin-bottom:13px">
+        <div class="form-group">
+          <label>Username / Email</label>
+          <input id="smtpUser" type="text" placeholder="you@yourdomain.com" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input id="smtpPass" type="password" placeholder="••••••••••" />
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom:13px">
+        <label>From Display Name</label>
+        <input id="smtpFromName" type="text" placeholder="My Company" />
+      </div>
+      <div class="toggle-row">
+        <span style="font-size:.88rem">Use STARTTLS (port 587) — turn OFF for SSL/TLS (port 465)</span>
+        <label class="toggle"><input type="checkbox" id="smtpTLS" /><span class="slider"></span></label>
+      </div>
+      <div class="form-group" style="margin-top:16px">
+        <label style="display:flex;align-items:center;justify-content:space-between">
+          <span>Email Signature <span style="font-weight:400;color:var(--muted)">(HTML or plain text — appended to every email)</span></span>
+          <button class="btn btn-ghost" style="padding:3px 10px;font-size:.75rem" onclick="previewSignature()">👁 Preview</button>
+        </label>
+        <textarea id="smtpSignature" rows="6"
+          style="font-family:monospace;font-size:.8rem;resize:vertical"
+          placeholder="Paste your HTML signature here…"></textarea>
+      </div>
+      <div id="sigPreview" style="display:none;border:1px solid var(--border);border-radius:8px;padding:14px;margin-top:6px;background:#fafafa"></div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="saveSMTP()">💾 Save Settings</button>
+        <button class="btn btn-ghost"   onclick="testSMTP()">🔌 Test Connection</button>
+      </div>
+      <div class="alert" id="smtpAlert"></div>
+    </div>
+
+    <div class="card" style="background:#eef2ff;border-color:#c7d2fe">
+      <div class="card-title" style="color:var(--accent-h)">💡 Quick-Fill Providers</div>
+      <table>
+        <thead><tr><th>Provider</th><th>Host</th><th>Port</th><th>Mode</th><th></th></tr></thead>
+        <tbody>
+          <tr style="background:#f0fdf4">
+            <td><strong style="color:#15803d">🏷️ Namecheap Private Email</strong></td>
+            <td>mail.privateemail.com</td><td>465</td><td>SSL</td>
+            <td><button class="btn btn-ghost btn-sm" onclick="fillSMTP('mail.privateemail.com',465,false)">Fill ↗</button></td>
+          </tr>
+          <tr>
+            <td>Gmail</td><td>smtp.gmail.com</td><td>587</td><td>STARTTLS</td>
+            <td><button class="btn btn-ghost btn-sm" onclick="fillSMTP('smtp.gmail.com',587,true)">Fill ↗</button></td>
+          </tr>
+          <tr>
+            <td>Outlook / Hotmail</td><td>smtp.office365.com</td><td>587</td><td>STARTTLS</td>
+            <td><button class="btn btn-ghost btn-sm" onclick="fillSMTP('smtp.office365.com',587,true)">Fill ↗</button></td>
+          </tr>
+          <tr>
+            <td>Yahoo</td><td>smtp.mail.yahoo.com</td><td>465</td><td>SSL</td>
+            <td><button class="btn btn-ghost btn-sm" onclick="fillSMTP('smtp.mail.yahoo.com',465,false)">Fill ↗</button></td>
+          </tr>
+          <tr>
+            <td>Naver</td><td>smtp.naver.com</td><td>465</td><td>SSL</td>
+            <td><button class="btn btn-ghost btn-sm" onclick="fillSMTP('smtp.naver.com',465,false)">Fill ↗</button></td>
+          </tr>
+          <tr>
+            <td>Daum / Kakao</td><td>smtp.daum.net</td><td>465</td><td>SSL</td>
+            <td><button class="btn btn-ghost btn-sm" onclick="fillSMTP('smtp.daum.net',465,false)">Fill ↗</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ══════════════ TEMPLATES ══════════════ -->
+  <div class="tab-panel" id="tab-templates">
+
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px">
+      <div>
+        <div style="font-size:1rem;font-weight:700">📁 Categories &amp; Templates</div>
+        <div style="font-size:.82rem;color:var(--muted);margin-top:2px">
+          Create categories → add multiple templates per category → bot rotates them to avoid spam detection
+        </div>
+      </div>
+    </div>
+
+    <div class="two-panel">
+      <!-- Left: Categories -->
+      <div class="panel-left">
+        <div class="panel-header">
+          Categories
+          <button class="btn btn-primary btn-sm" onclick="showAddCatForm()">+ New</button>
+        </div>
+
+        <!-- Add category inline form -->
+        <div id="addCatForm" style="display:none" class="cat-edit-row">
+          <input id="newCatName" type="text" placeholder="Category name…" onkeydown="if(event.key==='Enter')saveNewCat()" />
+          <button class="btn btn-primary btn-sm" onclick="saveNewCat()">Add</button>
+          <button class="btn btn-ghost   btn-sm" onclick="hideAddCatForm()">✕</button>
+        </div>
+
+        <div id="catList">
+          <div class="empty-state" style="padding:30px 16px">
+            <div class="empty-icon">📂</div>
+            <p>No categories yet.<br/>Click <strong>+ New</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Templates -->
+      <div class="panel-right" id="tplPanel">
+        <div class="panel-header">
+          <span id="tplPanelTitle">Select a category</span>
+          <button class="btn btn-primary btn-sm" id="btnAddTpl" onclick="showAddTplForm()" style="display:none">+ Add Template</button>
+        </div>
+
+        <!-- Add/Edit template form -->
+        <div id="tplForm" style="display:none" class="inline-form">
+          <div class="form-title" id="tplFormTitle">New Template</div>
+          <input type="hidden" id="tplFormId" />
+          <div class="form-group">
+            <label>Template Name (internal label)</label>
+            <input id="tplFormName" type="text" placeholder="e.g. Version A – Friendly tone" />
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input id="tplFormSubject" type="text" placeholder="Hi {{name}}, something special for you!" />
+          </div>
+          <div class="form-group">
+            <label>Body — use <code style="color:var(--accent)">{{name}}</code> and <code style="color:var(--accent)">{{email}}</code></label>
+            <textarea id="tplFormBody" rows="7" placeholder="Hi {{name}},&#10;&#10;..."></textarea>
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-primary" onclick="saveTplForm()">💾 Save Template</button>
+            <button class="btn btn-ghost"   onclick="hideTplForm()">Cancel</button>
+          </div>
+        </div>
+
+        <div id="tplList">
+          <div class="empty-state">
+            <div class="empty-icon">📑</div>
+            <p>Select a category on the left</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ RECIPIENTS ══════════════ -->
+  <div class="tab-panel" id="tab-recipients">
+
+    <div class="card">
+      <div class="card-title">📂 Upload Recipients (.xlsx)</div>
+      <div class="drop-zone" id="dropZone">
+        <input type="file" accept=".xlsx" id="fileInput" onchange="handleFileUpload(this.files[0])" />
+        <div class="dz-icon">📊</div>
+        <strong>Click or drag &amp; drop your .xlsx file</strong>
+        <p>Column A = Name &nbsp;|&nbsp; Column B = Email &nbsp;|&nbsp; Row 1 = Header (auto-skipped)</p>
+      </div>
+      <div class="alert" id="uploadAlert"></div>
+    </div>
+
+    <!-- Category selector -->
+    <div class="card" id="catSelectorCard">
+      <div class="card-title">📁 Select Category for This Send</div>
+      <div style="font-size:.84rem;color:var(--muted);margin-bottom:12px">
+        The bot will rotate through all templates in the selected category — one template per recipient, cycling back.
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <select id="catSelect" style="max-width:320px;flex:1">
+          <option value="">— Choose a category —</option>
+        </select>
+        <button class="btn btn-primary" onclick="applyCategory()">✅ Apply Category</button>
+      </div>
+      <div class="alert" id="catSelectAlert"></div>
+
+      <!-- Rotation preview -->
+      <div id="rotationPreview" style="display:none;margin-top:16px">
+        <div style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-bottom:8px">
+          Template Rotation Order
+        </div>
+        <div id="rotationList" style="display:flex;flex-direction:column;gap:6px"></div>
+      </div>
+    </div>
+
+    <!-- Recipient list -->
+    <div class="card" id="recipientsCard" style="display:none">
+      <div class="card-title" style="justify-content:space-between">
+        <span>👥 Recipient List</span>
+        <span id="recipientCount" style="font-size:.88rem;color:var(--text)"></span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Name</th><th>Email</th><th>Status</th></tr></thead>
+          <tbody id="recipientsTbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ LOGS ══════════════ -->
+  <div class="tab-panel" id="tab-logs">
+    <div class="card">
+      <div class="card-title" style="justify-content:space-between">
+        <span>📋 Sending Logs</span>
+        <button class="btn btn-ghost btn-sm" onclick="clearLogs()">🗑 Clear</button>
+      </div>
+      <div class="log-list" id="mainLogs"></div>
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<script>
+// ══════════════════════════════════════════════════════
+//  Tab switching
+// ══════════════════════════════════════════════════════
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    if (btn.dataset.tab === 'templates')  loadCategories();
+    if (btn.dataset.tab === 'recipients') { loadRecipients(); loadCatSelector(); }
+  });
+});
+
+// ══════════════════════════════════════════════════════
+//  Helpers
+// ══════════════════════════════════════════════════════
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function showAlert(id, ok, msg) {
+  const el = document.getElementById(id);
+  el.className = 'alert show ' + (ok ? 'ok' : 'err');
+  el.textContent = msg;
+  clearTimeout(el._t);
+  el._t = setTimeout(() => el.classList.remove('show'), 5000);
+}
+async function api(url, opts = {}) {
+  const res = await fetch(url, { headers: { 'Content-Type': 'application/json' }, ...opts });
+  return res.json();
+}
+
+// ══════════════════════════════════════════════════════
+//  SMTP
+// ══════════════════════════════════════════════════════
+function fillSMTP(host, port, useTLS) {
+  document.getElementById('smtpHost').value = host;
+  document.getElementById('smtpPort').value = port;
+  document.getElementById('smtpTLS').checked = useTLS;
+  document.getElementById('smtpUser').focus();
+}
+async function loadSMTP() {
+  const r = await api('/api/smtp');
+  document.getElementById('smtpHost').value     = r.host;
+  document.getElementById('smtpPort').value     = r.port;
+  document.getElementById('smtpUser').value      = r.username;
+  document.getElementById('smtpPass').value      = r.password;
+  document.getElementById('smtpFromName').value  = r.fromName;
+  document.getElementById('smtpTLS').checked     = r.useTLS;
+  document.getElementById('smtpSignature').value = r.signature || '';
+}
+async function saveSMTP() {
+  const r = await api('/api/smtp', {
+    method: 'POST',
+    body: JSON.stringify({
+      host:     document.getElementById('smtpHost').value,
+      port:     document.getElementById('smtpPort').value,
+      username: document.getElementById('smtpUser').value,
+      password: document.getElementById('smtpPass').value,
+      fromName:  document.getElementById('smtpFromName').value,
+      useTLS:    document.getElementById('smtpTLS').checked,
+      signature: document.getElementById('smtpSignature').value,
+    }),
+  });
+  showAlert('smtpAlert', r.ok, r.message);
+}
+function previewSignature() {
+  const html = document.getElementById('smtpSignature').value.trim();
+  const box  = document.getElementById('sigPreview');
+  if (!html) { box.style.display = 'none'; return; }
+  box.innerHTML = html;
+  box.style.display = 'block';
+  box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+async function testSMTP() {
+  const btn = document.querySelector('button[onclick="testSMTP()"]');
+  btn.disabled = true;
+  btn.textContent = '🔄 Testing…';
+  showAlert('smtpAlert', true, '🔄 Testing connection…');
+  try {
+    // Save silently first (no alert popup)
+    await fetch('/api/smtp', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        host:     document.getElementById('smtpHost').value,
+        port:     document.getElementById('smtpPort').value,
+        username: document.getElementById('smtpUser').value,
+        password: document.getElementById('smtpPass').value,
+        fromName:  document.getElementById('smtpFromName').value,
+        useTLS:    document.getElementById('smtpTLS').checked,
+        signature: document.getElementById('smtpSignature').value,
+      }),
+    });
+    // Then test and show only the result
+    const r = await api('/api/smtp/test', { method: 'POST' });
+    showAlert('smtpAlert', r.ok, r.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '🔌 Test Connection';
+  }
+}
+
+// ══════════════════════════════════════════════════════
+//  Categories
+// ══════════════════════════════════════════════════════
+let activeCatId = null;
+let editingCatId = null;
+
+async function loadCategories() {
+  const cats = await api('/api/categories');
+  renderCatList(cats);
+  // If activeCatId is set, reload templates
+  if (activeCatId) loadTemplates(activeCatId, cats);
+}
+
+function renderCatList(cats) {
+  const el = document.getElementById('catList');
+  if (!cats.length) {
+    el.innerHTML = `<div class="empty-state" style="padding:30px 16px">
+      <div class="empty-icon">📂</div><p>No categories yet.<br/>Click <strong>+ New</strong></p></div>`;
+    return;
+  }
+  el.innerHTML = cats.map(c => {
+    if (editingCatId === c.id) {
+      return `<div class="cat-edit-row" id="editCatRow-${c.id}">
+        <input id="editCatInput-${c.id}" type="text" value="${esc(c.name)}"
+          onkeydown="if(event.key==='Enter')saveEditCat('${c.id}')" />
+        <button class="btn btn-primary btn-sm" onclick="saveEditCat('${c.id}')">✓</button>
+        <button class="btn btn-ghost   btn-sm" onclick="cancelEditCat()">✕</button>
+      </div>`;
+    }
+    return `<div class="cat-item ${activeCatId === c.id ? 'active' : ''}" onclick="selectCat('${c.id}')">
+      <span class="cat-name">${esc(c.name)}</span>
+      <span class="cat-count">${c.templateCount}</span>
+      <div class="cat-actions">
+        <button class="btn btn-ghost btn-sm" title="Rename"
+          onclick="event.stopPropagation();startEditCat('${c.id}')">✎</button>
+        <button class="btn btn-danger btn-sm" title="Delete"
+          onclick="event.stopPropagation();deleteCat('${c.id}','${esc(c.name)}')">🗑</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function showAddCatForm() {
+  document.getElementById('addCatForm').style.display = 'flex';
+  document.getElementById('newCatName').value = '';
+  document.getElementById('newCatName').focus();
+}
+function hideAddCatForm() {
+  document.getElementById('addCatForm').style.display = 'none';
+}
+async function saveNewCat() {
+  const name = document.getElementById('newCatName').value.trim();
+  if (!name) return;
+  const r = await api('/api/categories', { method: 'POST', body: JSON.stringify({ name }) });
+  if (r.ok) {
+    hideAddCatForm();
+    await loadCategories();
+    selectCat(r.category.id);
+  }
+}
+function startEditCat(id) {
+  editingCatId = id;
+  loadCategories();
+  setTimeout(() => document.getElementById(`editCatInput-${id}`)?.focus(), 50);
+}
+function cancelEditCat() {
+  editingCatId = null;
+  loadCategories();
+}
+async function saveEditCat(id) {
+  const name = document.getElementById(`editCatInput-${id}`).value.trim();
+  if (!name) return;
+  await api(`/api/categories/${id}`, { method: 'PUT', body: JSON.stringify({ name }) });
+  editingCatId = null;
+  loadCategories();
+}
+async function deleteCat(id, name) {
+  if (!confirm(`Delete category "${name}" and ALL its templates?`)) return;
+  await api(`/api/categories/${id}`, { method: 'DELETE' });
+  if (activeCatId === id) {
+    activeCatId = null;
+    document.getElementById('tplPanelTitle').textContent = 'Select a category';
+    document.getElementById('btnAddTpl').style.display = 'none';
+    document.getElementById('tplList').innerHTML = `<div class="empty-state"><div class="empty-icon">📑</div><p>Select a category on the left</p></div>`;
+    hideTplForm();
+  }
+  loadCategories();
+}
+
+// ══════════════════════════════════════════════════════
+//  Templates
+// ══════════════════════════════════════════════════════
+function selectCat(id) {
+  activeCatId = id;
+  hideTplForm();
+  loadCategories();
+  loadTemplates(id);
+}
+
+async function loadTemplates(catId, cats) {
+  const allCats = cats || await api('/api/categories');
+  const cat = allCats.find(c => c.id === catId);
+  const templates = await api(`/api/templates?categoryId=${catId}`);
+
+  document.getElementById('tplPanelTitle').textContent =
+    cat ? `${cat.name}` : 'Templates';
+  document.getElementById('btnAddTpl').style.display = 'inline-flex';
+
+  renderTemplates(templates);
+}
+
+function renderTemplates(templates) {
+  const el = document.getElementById('tplList');
+  if (!templates.length) {
+    el.innerHTML = `<div class="empty-state" style="padding:30px">
+      <div class="empty-icon">✉️</div>
+      <p>No templates yet.<br/>Click <strong>+ Add Template</strong></p></div>`;
+    return;
+  }
+  el.innerHTML = templates.map(t => `
+    <div class="tpl-card" id="tplCard-${t.id}">
+      <div class="tpl-card-header">
+        <div>
+          <div class="tpl-name">✉️ ${esc(t.name)}</div>
+          <div class="tpl-subject">Subject: <span>${esc(t.subject)}</span></div>
+        </div>
+        <div class="tpl-actions">
+          <button class="btn btn-ghost btn-sm" onclick="startEditTpl('${t.id}')">✎ Edit</button>
+          <button class="btn btn-danger btn-sm" onclick="deleteTpl('${t.id}','${esc(t.name)}')">🗑</button>
+        </div>
+      </div>
+      <div class="tpl-body-preview">${esc(t.body)}</div>
+    </div>`).join('');
+}
+
+function showAddTplForm() {
+  document.getElementById('tplFormId').value      = '';
+  document.getElementById('tplFormTitle').textContent = '✨ New Template';
+  document.getElementById('tplFormName').value    = '';
+  document.getElementById('tplFormSubject').value = '';
+  document.getElementById('tplFormBody').value    = '';
+  document.getElementById('tplForm').style.display = 'block';
+  document.getElementById('tplFormName').focus();
+  // scroll into view
+  document.getElementById('tplForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function hideTplForm() {
+  document.getElementById('tplForm').style.display = 'none';
+}
+async function startEditTpl(id) {
+  const all = await api(`/api/templates?categoryId=${activeCatId}`);
+  const t = all.find(x => x.id === id);
+  if (!t) return;
+  document.getElementById('tplFormId').value      = t.id;
+  document.getElementById('tplFormTitle').textContent = '✎ Edit Template';
+  document.getElementById('tplFormName').value    = t.name;
+  document.getElementById('tplFormSubject').value = t.subject;
+  document.getElementById('tplFormBody').value    = t.body;
+  document.getElementById('tplForm').style.display = 'block';
+  document.getElementById('tplForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+async function saveTplForm() {
+  const id      = document.getElementById('tplFormId').value;
+  const name    = document.getElementById('tplFormName').value.trim();
+  const subject = document.getElementById('tplFormSubject').value.trim();
+  const body    = document.getElementById('tplFormBody').value.trim();
+  if (!name || !subject || !body) { alert('Please fill in all fields.'); return; }
+
+  if (id) {
+    await api(`/api/templates/${id}`, { method: 'PUT', body: JSON.stringify({ name, subject, body }) });
+  } else {
+    await api('/api/templates', { method: 'POST', body: JSON.stringify({ categoryId: activeCatId, name, subject, body }) });
+  }
+  hideTplForm();
+  loadTemplates(activeCatId);
+  loadCategories(); // refresh count
+}
+async function deleteTpl(id, name) {
+  if (!confirm(`Delete template "${name}"?`)) return;
+  await api(`/api/templates/${id}`, { method: 'DELETE' });
+  loadTemplates(activeCatId);
+  loadCategories();
+}
+
+// ══════════════════════════════════════════════════════
+//  Recipients tab
+// ══════════════════════════════════════════════════════
+const dropZone = document.getElementById('dropZone');
+dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+dropZone.addEventListener('drop', e => {
+  e.preventDefault(); dropZone.classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (file) handleFileUpload(file);
+});
+
+async function handleFileUpload(file) {
+  if (!file) return;
+  const fd = new FormData();
+  fd.append('file', file);
+  showAlert('uploadAlert', true, '⏳ Parsing file…');
+  const r = await fetch('/api/upload', { method: 'POST', body: fd }).then(x => x.json());
+  showAlert('uploadAlert', r.ok,
+    r.ok ? `✅ Loaded ${r.count} recipients (${r.skipped} rows skipped)` : r.message);
+  if (r.ok) loadRecipients();
+}
+
+async function loadCatSelector() {
+  const cats = await api('/api/categories');
+  const sel  = document.getElementById('catSelect');
+  const status = await api('/api/status');
+
+  sel.innerHTML = '<option value="">— Choose a category —</option>' +
+    cats.map(c => `<option value="${c.id}" ${status.selectedCategoryId === c.id ? 'selected' : ''}>
+      ${esc(c.name)} (${c.templateCount} templates)
+    </option>`).join('');
+
+  if (status.selectedCategoryId) showRotationPreview(status.selectedCategoryId);
+}
+
+async function applyCategory() {
+  const catId = document.getElementById('catSelect').value;
+  if (!catId) { showAlert('catSelectAlert', false, 'Please choose a category first.'); return; }
+  const r = await api('/api/select-category', { method: 'POST', body: JSON.stringify({ categoryId: catId }) });
+  showAlert('catSelectAlert', r.ok, r.message);
+  if (r.ok) showRotationPreview(catId);
+}
+
+async function showRotationPreview(catId) {
+  const templates = await api(`/api/templates?categoryId=${catId}`);
+  const el = document.getElementById('rotationPreview');
+  const list = document.getElementById('rotationList');
+  if (!templates.length) { el.style.display = 'none'; return; }
+  el.style.display = 'block';
+  list.innerHTML = templates.map((t, i) => `
+    <div style="display:flex;align-items:center;gap:8px;font-size:.83rem;padding:7px 10px;
+      background:#f8fafc;border:1px solid var(--border);border-radius:8px">
+      <span style="background:var(--accent);color:#fff;border-radius:99px;
+        width:20px;height:20px;display:flex;align-items:center;justify-content:center;
+        font-size:.7rem;font-weight:700;flex-shrink:0">${i + 1}</span>
+      <div>
+        <div style="font-weight:600">${esc(t.name)}</div>
+        <div style="color:var(--muted)">${esc(t.subject)}</div>
+      </div>
+    </div>`).join('');
+}
+
+async function loadRecipients() {
+  const r = await api('/api/email-list');
+  const tbody = document.getElementById('recipientsTbody');
+  tbody.innerHTML = '';
+  if (!r.list.length) {
+    document.getElementById('recipientsCard').style.display = 'none';
+    return;
+  }
+  document.getElementById('recipientsCard').style.display = 'block';
+  document.getElementById('recipientCount').textContent =
+    `${r.count} total — ${r.currentIndex} sent`;
+  r.list.forEach((rec, i) => {
+    const sent = i < r.currentIndex;
+    tbody.innerHTML += `<tr>
+      <td style="color:var(--muted)">${i + 1}</td>
+      <td>${esc(rec.name)}</td>
+      <td>${esc(rec.email)}</td>
+      <td>${sent ? '<span class="badge-sent">✓ Sent</span>' : '<span class="badge-pending">Pending</span>'}</td>
+    </tr>`;
+  });
+}
+
+// ══════════════════════════════════════════════════════
+//  Scheduler
+// ══════════════════════════════════════════════════════
+async function startScheduler() {
+  const r = await api('/api/scheduler/start', { method: 'POST' });
+  if (!r.ok) alert('❌ ' + r.message);
+}
+async function stopScheduler() {
+  const r = await api('/api/scheduler/stop', { method: 'POST' });
+  if (!r.ok) alert('❌ ' + r.message);
+}
+async function clearRecipients() {
+  if (!confirm('Clear the entire recipient list?')) return;
+  const r = await api('/api/recipients/clear', { method: 'POST' });
+  if (!r.ok) alert('❌ ' + r.message);
+}
+async function saveInterval() {
+  const v = document.getElementById('dashInterval').value;
+  await api('/api/settings', { method: 'POST', body: JSON.stringify({ intervalSeconds: v }) });
+}
+
+// ══════════════════════════════════════════════════════
+//  Logs
+// ══════════════════════════════════════════════════════
+let latestLogId = null;
+
+async function fetchLogs() {
+  const url = latestLogId ? `/api/logs?since_id=${latestLogId}` : '/api/logs';
+  const r = await api(url);
+  if (r.logs.length) {
+    latestLogId = r.logs[0].id;
+    prependLogs(r.logs);
+  }
+}
+async function loadAllLogs() {
+  const r = await api('/api/logs');
+  latestLogId = r.logs[0]?.id || null;
+  document.getElementById('mainLogs').innerHTML = '';
+  document.getElementById('dashLogs').innerHTML = '';
+  appendLogs(r.logs, 'mainLogs');
+  appendLogs(r.logs, 'dashLogs');
+}
+function prependLogs(logs) {
+  ['mainLogs', 'dashLogs'].forEach(id => {
+    const el = document.getElementById(id);
+    logs.forEach(log => el.insertBefore(makeLogEl(log), el.firstChild));
+  });
+}
+function appendLogs(logs, id) {
+  const el = document.getElementById(id);
+  logs.forEach(log => el.appendChild(makeLogEl(log)));
+}
+function makeLogEl(log) {
+  const div = document.createElement('div');
+  div.className = `log-entry ${log.level}`;
+  div.innerHTML = `<span class="dot"></span>
+    <span class="ts">${esc(log.timestamp)}</span>
+    <span class="msg">${esc(log.message)}</span>`;
+  return div;
+}
+async function clearLogs() {
+  await api('/api/logs', { method: 'DELETE' });
+  document.getElementById('mainLogs').innerHTML = '';
+  document.getElementById('dashLogs').innerHTML = '';
+  latestLogId = null;
+}
+
+// ══════════════════════════════════════════════════════
+//  Status polling
+// ══════════════════════════════════════════════════════
+let nextSendAt = null;
+
+async function pollStatus() {
+  const s = await api('/api/status');
+
+  document.getElementById('statTotal').textContent     = s.total;
+  document.getElementById('statSent').textContent      = s.sent;
+  document.getElementById('statRemaining').textContent = s.remaining;
+  document.getElementById('statTemplates').textContent =
+    s.templateCount ? `${s.templateCount}` : '–';
+  document.getElementById('dashInterval').value = s.intervalSeconds;
+
+  const pct = s.total ? Math.round((s.sent / s.total) * 100) : 0;
+  document.getElementById('progressBar').style.width  = pct + '%';
+  document.getElementById('progressLabel').textContent = `${s.sent} / ${s.total} (${pct}%)`;
+
+  document.getElementById('btnStart').disabled = s.isRunning;
+  document.getElementById('btnStop').disabled  = !s.isRunning;
+  const badge = document.getElementById('statusBadge');
+  badge.textContent = s.isRunning ? '● Running' : '● Idle';
+  badge.className   = 'badge' + (s.isRunning ? ' running' : '');
+
+  // Resume banner
+  const resumeBanner = document.getElementById('resumeBanner');
+  if (s.resumable) {
+    resumeBanner.style.display = 'flex';
+    document.getElementById('resumeText').textContent =
+      `Unfinished job detected — ${s.sent} sent, ${s.remaining} recipients still pending. Resume where you left off?`;
+  } else {
+    resumeBanner.style.display = 'none';
+  }
+
+  // Category banner
+  const catBanner   = document.getElementById('catBanner');
+  const noCatBanner = document.getElementById('noCatBanner');
+  if (s.selectedCategoryName) {
+    catBanner.style.display   = 'flex';
+    noCatBanner.style.display = 'none';
+    document.getElementById('catBannerText').textContent =
+      `Category: "${s.selectedCategoryName}" — ${s.templateCount} template(s) will rotate per recipient`;
+  } else {
+    catBanner.style.display   = 'none';
+    noCatBanner.style.display = 'flex';
+  }
+
+  if (s.nextSendAt) nextSendAt = new Date(s.nextSendAt);
+  else if (!s.isRunning) nextSendAt = null;
+}
+
+function updateCountdown() {
+  const el = document.getElementById('countdown');
+  if (!nextSendAt) { el.textContent = '–'; return; }
+  const diff = Math.max(0, Math.round((nextSendAt - Date.now()) / 1000));
+  const m = Math.floor(diff / 60);
+  const sec = diff % 60;
+  el.textContent = diff === 0 ? 'Sending…' : `${m}m ${String(sec).padStart(2, '0')}s`;
+}
+
+// ══════════════════════════════════════════════════════
+//  Init
+// ══════════════════════════════════════════════════════
+(async () => {
+  await Promise.all([loadSMTP(), loadAllLogs(), pollStatus()]);
+  setInterval(pollStatus, 3000);
+  setInterval(fetchLogs,  3000);
+  setInterval(updateCountdown, 1000);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+[
+  {
+    "id": "mmp2geirjd13z",
+    "timestamp": "3/14/2026, 00:43:20",
+    "level": "info",
+    "message": "🗑 Recipient list cleared.",
+    "recipient": null
+  },
+  {
+    "id": "mmp2cmc6p1qx7",
+    "timestamp": "3/14/2026, 00:40:23",
+    "level": "info",
+    "message": "✅ All emails sent. Scheduler finished.",
+    "recipient": null
+  },
+  {
+    "id": "mmp2cmc6lgkta",
+    "timestamp": "3/14/2026, 00:40:23",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Arnold <arnold@mlmprotec.com>",
+    "recipient": "arnold@mlmprotec.com"
+  },
+  {
+    "id": "mmp2cc13bwkm6",
+    "timestamp": "3/14/2026, 00:40:10",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Dumitru <dumitruilie65@outlook.com>",
+    "recipient": "dumitruilie65@outlook.com"
+  },
+  {
+    "id": "mmp2c16q5xexn",
+    "timestamp": "3/14/2026, 00:39:56",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Benjamin <bencoste@outlook.com>",
+    "recipient": "bencoste@outlook.com"
+  },
+  {
+    "id": "mmp2bq8bwl831",
+    "timestamp": "3/14/2026, 00:39:42",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Irina <irinaotero@outlook.com>",
+    "recipient": "irinaotero@outlook.com"
+  },
+  {
+    "id": "mmp2b7x4peclm",
+    "timestamp": "3/14/2026, 00:39:18",
+    "level": "info",
+    "message": "🚀 Started — 4 recipients remaining | Category: \"Upland-first-try\" | 5 templates | Interval: 10s",
+    "recipient": null
+  },
+  {
+    "id": "mmp2b1ws6adb4",
+    "timestamp": "3/14/2026, 00:39:10",
+    "level": "info",
+    "message": "📋 Loaded 4 recipients from \"test.xlsx\" (0 invalid rows skipped)",
+    "recipient": null
+  },
+  {
+    "id": "mmp2aiay4c9he",
+    "timestamp": "3/14/2026, 00:38:45",
+    "level": "info",
+    "message": "🗑 Recipient list cleared.",
+    "recipient": null
+  },
+  {
+    "id": "mmp1qxl3ra7ra",
+    "timestamp": "3/14/2026, 00:23:32",
+    "level": "info",
+    "message": "✅ All emails sent. Scheduler finished.",
+    "recipient": null
+  },
+  {
+    "id": "mmp1qxl20yvqr",
+    "timestamp": "3/14/2026, 00:23:32",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Arnold <arnold@mlmprotec.com>",
+    "recipient": "arnold@mlmprotec.com"
+  },
+  {
+    "id": "mmp1qnc63kpjw",
+    "timestamp": "3/14/2026, 00:23:18",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Dumitru <dumitruilie65@outlook.com>",
+    "recipient": "dumitruilie65@outlook.com"
+  },
+  {
+    "id": "mmp1qd27zel52",
+    "timestamp": "3/14/2026, 00:23:05",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Benjamin <bencoste@outlook.com>",
+    "recipient": "bencoste@outlook.com"
+  },
+  {
+    "id": "mmp1pn2f5o8uv",
+    "timestamp": "3/14/2026, 00:22:31",
+    "level": "info",
+    "message": "🚀 Started — 3 recipients remaining | Category: \"Upland-first-try\" | 5 templates | Interval: 10s",
+    "recipient": null
+  },
+  {
+    "id": "mmp1kxg7w521n",
+    "timestamp": "3/14/2026, 00:18:51",
+    "level": "info",
+    "message": "🛑 Scheduler stopped — progress saved (1/4)",
+    "recipient": null
+  },
+  {
+    "id": "mmp1kkdczvp38",
+    "timestamp": "3/14/2026, 00:18:35",
+    "level": "info",
+    "message": "🚀 Started — 3 recipients remaining | Category: \"Upland-first-try\" | 5 templates | Interval: 1 min",
+    "recipient": null
+  },
+  {
+    "id": "mmp1k56vudwze",
+    "timestamp": "3/14/2026, 00:18:15",
+    "level": "info",
+    "message": "🛑 Scheduler stopped — progress saved (1/4)",
+    "recipient": null
+  },
+  {
+    "id": "mmp1jloyjok66",
+    "timestamp": "3/14/2026, 00:17:50",
+    "level": "info",
+    "message": "🚀 Started — 3 recipients remaining | Category: \"Upland-first-try\" | 5 templates | Interval: 1 min",
+    "recipient": null
+  },
+  {
+    "id": "mmp1iks50ck0e",
+    "timestamp": "3/14/2026, 00:17:02",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Irina <irinaotero@outlook.com>",
+    "recipient": "irinaotero@outlook.com"
+  },
+  {
+    "id": "mmp1i2eicnx1v",
+    "timestamp": "3/14/2026, 00:16:38",
+    "level": "info",
+    "message": "🚀 Started — 4 recipients remaining | Category: \"Upland-first-try\" | 5 templates | Interval: 1 min",
+    "recipient": null
+  },
+  {
+    "id": "mmp1gohe6da14",
+    "timestamp": "3/14/2026, 00:15:33",
+    "level": "info",
+    "message": "📋 Loaded 4 recipients from \"test.xlsx\" (0 invalid rows skipped)",
+    "recipient": null
+  },
+  {
+    "id": "mmp1gg8ku67ir",
+    "timestamp": "3/14/2026, 00:15:23",
+    "level": "info",
+    "message": "🗑 Recipient list cleared.",
+    "recipient": null
+  },
+  {
+    "id": "mmp1a1suhpjcw",
+    "timestamp": "3/14/2026, 00:10:24",
+    "level": "info",
+    "message": "🔄 Queue reset to beginning.",
+    "recipient": null
+  },
+  {
+    "id": "mmp1a1muoqqeu",
+    "timestamp": "3/14/2026, 00:10:24",
+    "level": "info",
+    "message": "🔄 Queue reset to beginning.",
+    "recipient": null
+  },
+  {
+    "id": "mmp1a1h24oz3t",
+    "timestamp": "3/14/2026, 00:10:23",
+    "level": "info",
+    "message": "🔄 Queue reset to beginning.",
+    "recipient": null
+  },
+  {
+    "id": "mmp1a16epj6ih",
+    "timestamp": "3/14/2026, 00:10:23",
+    "level": "info",
+    "message": "🔄 Queue reset to beginning.",
+    "recipient": null
+  },
+  {
+    "id": "mmp1a0t2jfess",
+    "timestamp": "3/14/2026, 00:10:23",
+    "level": "info",
+    "message": "🔄 Queue reset to beginning.",
+    "recipient": null
+  },
+  {
+    "id": "mmp19zf29t7d2",
+    "timestamp": "3/14/2026, 00:10:21",
+    "level": "info",
+    "message": "🔄 Queue reset to beginning.",
+    "recipient": null
+  },
+  {
+    "id": "mmp17p1sz9e7x",
+    "timestamp": "3/14/2026, 00:08:34",
+    "level": "info",
+    "message": "📋 Loaded 4 recipients from \"test.xlsx\" (0 invalid rows skipped)",
+    "recipient": null
+  },
+  {
+    "id": "mmp13ku8gl9q4",
+    "timestamp": "3/14/2026, 00:05:22",
+    "level": "info",
+    "message": "📋 Loaded 0 recipients from \"test.xlsx\" (4 skipped)",
+    "recipient": null
+  },
+  {
+    "id": "mmp11yl51vzsj",
+    "timestamp": "3/14/2026, 00:04:07",
+    "level": "info",
+    "message": "📋 Loaded 0 recipients from \"test.xlsx\" (3 skipped)",
+    "recipient": null
+  },
+  {
+    "id": "mmp11ocx2ttqc",
+    "timestamp": "3/14/2026, 00:03:53",
+    "level": "info",
+    "message": "📋 Loaded 0 recipients from \"test.xlsx\" (3 skipped)",
+    "recipient": null
+  },
+  {
+    "id": "mmp10l84twp5b",
+    "timestamp": "3/14/2026, 00:03:03",
+    "level": "info",
+    "message": "📋 Loaded 0 recipients from \"test.xlsx\" (3 skipped)",
+    "recipient": null
+  }
+]
