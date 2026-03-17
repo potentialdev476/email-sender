@@ -52,6 +52,7 @@ const state = {
   selectedCategoryId:    null,
   templateRotationIndex: 0,
   intervalSeconds:       30,
+  campaignVars:          {},   // custom variables e.g. { platform: 'LinkedIn' }
   isRunning:             false,
   currentIndex:          0,
   logs:                  [],
@@ -73,6 +74,7 @@ function saveState() {
         selectedCategoryId:    state.selectedCategoryId,
         templateRotationIndex: state.templateRotationIndex,
         intervalSeconds:       state.intervalSeconds,
+        campaignVars:          state.campaignVars,
         currentIndex:          state.currentIndex,
       };
       fs.writeFileSync(STATE_FILE, JSON.stringify(snapshot, null, 2), 'utf8');
@@ -106,6 +108,7 @@ function loadPersistedData() {
       state.selectedCategoryId    = saved.selectedCategoryId    || null;
       state.templateRotationIndex = saved.templateRotationIndex || 0;
       state.intervalSeconds       = saved.intervalSeconds ?? saved.intervalMinutes * 60 ?? 30;
+      state.campaignVars          = saved.campaignVars          || {};
       state.currentIndex          = saved.currentIndex          || 0;
       console.log(`[persist] State loaded — ${state.categories.length} categories, ` +
                   `${state.templates.length} templates, ${state.emailList.length} recipients`);
@@ -156,7 +159,14 @@ function getNextTemplate() {
 }
 
 function replacePlaceholders(text, name, email) {
-  return text.replace(/\{\{name\}\}/g, name).replace(/\{\{email\}\}/g, email);
+  let result = text
+    .replace(/\{\{name\}\}/g, name)
+    .replace(/\{\{email\}\}/g, email);
+  // Apply campaign variables (e.g. {{platform}}, {{jobTitle}}, etc.)
+  for (const [key, val] of Object.entries(state.campaignVars || {})) {
+    result = result.replace(new RegExp(`\\{\\{${key}\\}\\}`, 'g'), val);
+  }
+  return result;
 }
 
 // ── Email sender ──────────────────────────────────────────────────────────────
@@ -375,6 +385,26 @@ app.post('/api/select-category', (req, res) => {
       ? `✅ Category "${cat.name}" selected — ${tmplCount} template(s)`
       : 'Category cleared.',
   });
+});
+
+// ── Campaign Variables ────────────────────────────────────────────────────────
+app.get('/api/campaign-vars', (req, res) => {
+  res.json(state.campaignVars || {});
+});
+
+app.post('/api/campaign-vars', (req, res) => {
+  const incoming = req.body;
+  if (typeof incoming !== 'object' || Array.isArray(incoming))
+    return res.status(400).json({ ok: false, message: 'Invalid format.' });
+  const cleaned = {};
+  for (const [k, v] of Object.entries(incoming)) {
+    const key = k.trim().replace(/\s+/g, '_').replace(/[^a-zA-Z0-9_]/g, '');
+    if (key && key !== 'name' && key !== 'email')
+      cleaned[key] = String(v);
+  }
+  state.campaignVars = cleaned;
+  saveState();
+  res.json({ ok: true, vars: state.campaignVars });
 });
 
 // ── Settings ──────────────────────────────────────────────────────────────────

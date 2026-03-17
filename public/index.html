@@ -508,8 +508,8 @@
             <input id="tplFormSubject" type="text" placeholder="Hi {{name}}, something special for you!" />
           </div>
           <div class="form-group">
-            <label>Body — use <code style="color:var(--accent)">{{name}}</code> and <code style="color:var(--accent)">{{email}}</code></label>
-            <textarea id="tplFormBody" rows="7" placeholder="Hi {{name}},&#10;&#10;..."></textarea>
+            <label>Body — use <code style="color:var(--accent)">{{name}}</code>, <code style="color:var(--accent)">{{email}}</code>, or any campaign variable (e.g. <code style="color:var(--accent)">{{platform}}</code>)</label>
+            <textarea id="tplFormBody" rows="7" placeholder="Hi {{name}},&#10;&#10;I found your profile on {{platform}}..."></textarea>
           </div>
           <div class="btn-row">
             <button class="btn btn-primary" onclick="saveTplForm()">💾 Save Template</button>
@@ -539,6 +539,21 @@
         <p>Column A = Name &nbsp;|&nbsp; Column B = Email &nbsp;|&nbsp; Row 1 = Header (auto-skipped)</p>
       </div>
       <div class="alert" id="uploadAlert"></div>
+    </div>
+
+    <!-- Campaign Variables -->
+    <div class="card">
+      <div class="card-title">🔧 Campaign Variables</div>
+      <div style="font-size:.84rem;color:var(--muted);margin-bottom:14px">
+        Define variables once here and use them in <em>any</em> template with <code style="color:var(--accent)">{{variableName}}</code>.
+        Built-in: <code style="color:var(--accent)">{{name}}</code> <code style="color:var(--accent)">{{email}}</code>
+      </div>
+      <div id="varsList"></div>
+      <div class="btn-row">
+        <button class="btn btn-ghost btn-sm" onclick="addVarRow()">+ Add Variable</button>
+        <button class="btn btn-primary btn-sm" onclick="saveVars()">💾 Save Variables</button>
+      </div>
+      <div class="alert" id="varsAlert"></div>
     </div>
 
     <!-- Category selector -->
@@ -603,7 +618,7 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.classList.add('active');
     document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
     if (btn.dataset.tab === 'templates')  loadCategories();
-    if (btn.dataset.tab === 'recipients') { loadRecipients(); loadCatSelector(); }
+    if (btn.dataset.tab === 'recipients') { loadVars(); loadRecipients(); loadCatSelector(); }
   });
 });
 
@@ -903,6 +918,74 @@ async function handleFileUpload(file) {
   if (r.ok) loadRecipients();
 }
 
+// ══════════════════════════════════════════════════════
+//  Campaign Variables
+// ══════════════════════════════════════════════════════
+let _varsData = {};
+
+async function loadVars() {
+  _varsData = await api('/api/campaign-vars');
+  renderVars();
+}
+
+function renderVars() {
+  const el = document.getElementById('varsList');
+  const entries = Object.entries(_varsData);
+  if (!entries.length) {
+    el.innerHTML = '<p style="font-size:.83rem;color:var(--muted);padding:4px 0 8px">No variables yet — click <strong>+ Add Variable</strong>.</p>';
+    return;
+  }
+  el.innerHTML = entries.map(([k, v]) => `
+    <div class="var-row" style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
+      <code style="color:var(--accent);font-size:.82rem;width:16px">{{</code>
+      <input type="text" value="${esc(k)}" placeholder="variableName"
+        style="width:150px;flex-shrink:0" class="var-key-input" />
+      <code style="color:var(--accent);font-size:.82rem;width:16px">}}</code>
+      <span style="color:var(--muted);font-weight:600;padding:0 4px">=</span>
+      <input type="text" value="${esc(v)}" placeholder="value (e.g. LinkedIn)"
+        style="flex:1" class="var-val-input" />
+      <button class="btn btn-ghost btn-sm" onclick="removeVarRow(this)">✕</button>
+    </div>`).join('');
+}
+
+function addVarRow() {
+  const el = document.getElementById('varsList');
+  if (el.querySelector('p')) el.innerHTML = '';
+  const row = document.createElement('div');
+  row.className = 'var-row';
+  row.style.cssText = 'display:flex;gap:8px;align-items:center;margin-bottom:8px';
+  row.innerHTML = `
+    <code style="color:var(--accent);font-size:.82rem;width:16px">{{</code>
+    <input type="text" placeholder="platform" style="width:150px;flex-shrink:0" class="var-key-input" />
+    <code style="color:var(--accent);font-size:.82rem;width:16px">}}</code>
+    <span style="color:var(--muted);font-weight:600;padding:0 4px">=</span>
+    <input type="text" placeholder="LinkedIn" style="flex:1" class="var-val-input" />
+    <button class="btn btn-ghost btn-sm" onclick="removeVarRow(this)">✕</button>`;
+  el.appendChild(row);
+  row.querySelector('.var-key-input').focus();
+}
+
+function removeVarRow(btn) {
+  btn.closest('.var-row').remove();
+  const el = document.getElementById('varsList');
+  if (!el.querySelector('.var-row'))
+    el.innerHTML = '<p style="font-size:.83rem;color:var(--muted);padding:4px 0 8px">No variables yet — click <strong>+ Add Variable</strong>.</p>';
+}
+
+async function saveVars() {
+  const rows = document.querySelectorAll('#varsList .var-row');
+  const vars = {};
+  rows.forEach(row => {
+    const key = row.querySelector('.var-key-input').value.trim();
+    const val = row.querySelector('.var-val-input').value;
+    if (key) vars[key] = val;
+  });
+  const r = await api('/api/campaign-vars', { method: 'POST', body: JSON.stringify(vars) });
+  showAlert('varsAlert', r.ok,
+    r.ok ? `✅ ${Object.keys(r.vars).length} variable(s) saved.` : r.message);
+  if (r.ok) { _varsData = r.vars; renderVars(); }
+}
+
 async function loadCatSelector() {
   const cats = await api('/api/categories');
   const sel  = document.getElementById('catSelect');
@@ -1097,7 +1180,7 @@ function updateCountdown() {
 //  Init
 // ══════════════════════════════════════════════════════
 (async () => {
-  await Promise.all([loadSMTP(), loadAllLogs(), pollStatus()]);
+  await Promise.all([loadSMTP(), loadAllLogs(), pollStatus(), loadVars()]);
   setInterval(pollStatus, 3000);
   setInterval(fetchLogs,  3000);
   setInterval(updateCountdown, 1000);

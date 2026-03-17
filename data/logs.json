@@ -1,5 +1,1552 @@
 [
   {
+    "id": "mmu4hkmm9gec6",
+    "timestamp": "3/17/2026, 13:39:05",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → CypherDuck <ci@fedi.xyz>",
+    "recipient": "ci@fedi.xyz"
+  },
+  {
+    "id": "mmu4g7nozpin6",
+    "timestamp": "3/17/2026, 13:38:01",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → inchyangv <incheol@studioliq.com>",
+    "recipient": "incheol@studioliq.com"
+  },
+  {
+    "id": "mmu4euenqdhy2",
+    "timestamp": "3/17/2026, 13:36:57",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Noah <irobindachinonso@gmail.com>",
+    "recipient": "irobindachinonso@gmail.com"
+  },
+  {
+    "id": "mmu4d26crf62u",
+    "timestamp": "3/17/2026, 13:35:34",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → hacker8c51d8b <sarthakharsh24@gmail.com>",
+    "recipient": "sarthakharsh24@gmail.com"
+  },
+  {
+    "id": "mmu4bphoow8r3",
+    "timestamp": "3/17/2026, 13:34:31",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → mdlog <adiadi2411@gmail.com>",
+    "recipient": "adiadi2411@gmail.com"
+  },
+  {
+    "id": "mmu4acmu2970y",
+    "timestamp": "3/17/2026, 13:33:28",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → MePScieYer <sphelele.a.msweli@gmail.com>",
+    "recipient": "sphelele.a.msweli@gmail.com"
+  },
+  {
+    "id": "mmu48zwaqgv3o",
+    "timestamp": "3/17/2026, 13:32:25",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → skaunov <skaunov@disroot.org>",
+    "recipient": "skaunov@disroot.org"
+  },
+  {
+    "id": "mmu47n23rvz2o",
+    "timestamp": "3/17/2026, 13:31:21",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → NikhilRaikwar <raikwarnikhil80@gmail.com>",
+    "recipient": "raikwarnikhil80@gmail.com"
+  },
+  {
+    "id": "mmu45us083cu4",
+    "timestamp": "3/17/2026, 13:29:58",
+    "level": "info",
+    "message": "🚀 Started — 16 recipients remaining | Category: \"Upland-first-try\" | 5 templates | Interval: 60s",
+    "recipient": null
+  },
+  {
+    "id": "mmu43s8vbxkew",
+    "timestamp": "3/17/2026, 13:28:21",
+    "level": "info",
+    "message": "🛑 Scheduler stopped — progress saved (1/17)",
+    "recipient": null
+  },
+  {
+    "id": "mmu43qgvazb4i",
+    "timestamp": "3/17/2026, 13:28:19",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Dumitru <dumitruilie65@outlook.com>",
+    "recipient": "dumitruilie65@outlook.com"
+  },
+  {
+    "id": "mmu43o4nxw7zw",
+    "timestamp": "3/17/2026, 13:28:16",
+    "level": "info",
+    "message": "🚀 Started — 17 recipients remaining | Category: \"Upland-first-try\" | 5 templates | Interval: 60s",
+    "recipient": null
+  },
+  {
+    "id": "mmu43hdftr0uw",
+    "timestamp": "3/17/2026, 13:28:07",
+    "level": "info",
+    "message": "📋 Loaded 17 recipients from \"dorahacks-buidlbattle2-1773621583672-email.xlsx\" (0 invalid rows skipped)",
+    "recipient": null
+  },
+  {
+    "id": "mmu437ekhltxj",
+    "timestamp": "3/17/2026, 13:27:54",
+    "level": "info",
+    "message": "🗑 Recipient list cleared.",
+    "recipient": null
+  },
+  {
+    "id": "mmu3ynbnhistj",
+    "timestamp": "3/17/2026, 13:24:22",
+    "level": "info",
+    "message": "🛑 Scheduler stopped — progress saved (1/16)",
+    "recipient": null
+  },
+  {
+    "id": "mmu3ykxh8szjq",
+    "timestamp": "3/17/2026, 13:24:19",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → NikhilRaikwar <raikwarnikhil80@gmail.com>",
+    "recipient": "raikwarnikhil80@gmail.com"
+  },
+  {
+    "id": "mmu3y2rm4sh31",
+    "timestamp": "3/17/2026, 13:23:55",
+    "level": "info",
+    "message": "🚀 Started — 16 recipients remaining | Category: \"Upland-first-try\" | 5 templates | Interval: 60s",
+    "recipient": null
+  },
+  {
+    "id": "mmu3xw2ix516l",
+    "timestamp": "3/17/2026, 13:23:46",
+    "level": "info",
+    "message": "📋 Loaded 16 recipients from \"dorahacks-buidlbattle2-1773621583672-email.xlsx\" (0 invalid rows skipped)",
+    "recipient": null
+  },
+  {
+    "id": "mmu3vxj0fiizs",
+    "timestamp": "3/17/2026, 13:22:15",
+    "level": "info",
+    "message": "🗑 Recipient list cleared.",
+    "recipient": null
+  },
+  {
+    "id": "mmu3vpffz1k88",
+    "timestamp": "3/17/2026, 13:22:04",
+    "level": "info",
+    "message": "📋 Loaded 94 recipients from \"dorahacks-buidlbattle2-1773621583672-email.xlsx\" (0 invalid rows skipped)",
+    "recipient": null
+  },
+  {
+    "id": "mmu3bbr91ga97",
+    "timestamp": "3/17/2026, 13:06:14",
+    "level": "info",
+    "message": "🗑 Recipient list cleared.",
+    "recipient": null
+  },
+  {
+    "id": "mmt82fmlf0nah",
+    "timestamp": "3/16/2026, 22:31:31",
+    "level": "info",
+    "message": "🛑 Scheduler stopped — progress saved (78/94)",
+    "recipient": null
+  },
+  {
+    "id": "mmt81fzfi1ffw",
+    "timestamp": "3/16/2026, 22:30:44",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → dev_jaytee <Jethroirmiya@gmail.com>",
+    "recipient": "Jethroirmiya@gmail.com"
+  },
+  {
+    "id": "mmt803b22m4c1",
+    "timestamp": "3/16/2026, 22:29:41",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Dinesh Talwadker <talwadkerdinesh@gmail.com>",
+    "recipient": "talwadkerdinesh@gmail.com"
+  },
+  {
+    "id": "mmt7yproj6iog",
+    "timestamp": "3/16/2026, 22:28:37",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Ivan Molto <ivanmolto@gmail.com>",
+    "recipient": "ivanmolto@gmail.com"
+  },
+  {
+    "id": "mmt7wxfztjcp0",
+    "timestamp": "3/16/2026, 22:27:14",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → Anthonyushie <anthonytwan75official@gmail.com>",
+    "recipient": "anthonytwan75official@gmail.com"
+  },
+  {
+    "id": "mmt7vks1rg1zz",
+    "timestamp": "3/16/2026, 22:26:11",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Jagadeesh B <jagadeesh26062002@gmail.com>",
+    "recipient": "jagadeesh26062002@gmail.com"
+  },
+  {
+    "id": "mmt7u6zrgef2s",
+    "timestamp": "3/16/2026, 22:25:06",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Mustak Aalam <mustakaalam10@gmail.com>",
+    "recipient": "mustakaalam10@gmail.com"
+  },
+  {
+    "id": "mmt7su9875wjp",
+    "timestamp": "3/16/2026, 22:24:03",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Kunal <kunaldrall29@gmail.com>",
+    "recipient": "kunaldrall29@gmail.com"
+  },
+  {
+    "id": "mmt7rhkokrbem",
+    "timestamp": "3/16/2026, 22:23:00",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → ~0xmosas <tosinolosasa@gmail.com>",
+    "recipient": "tosinolosasa@gmail.com"
+  },
+  {
+    "id": "mmt7pp9y1ont4",
+    "timestamp": "3/16/2026, 22:21:37",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → gabrieltemtsen <gabrieltemtsen@gmail.com>",
+    "recipient": "gabrieltemtsen@gmail.com"
+  },
+  {
+    "id": "mmt7ockesb9wd",
+    "timestamp": "3/16/2026, 22:20:33",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Kenneth <kwadwobaahdanso@gmail.com>",
+    "recipient": "kwadwobaahdanso@gmail.com"
+  },
+  {
+    "id": "mmt7mzftkomw8",
+    "timestamp": "3/16/2026, 22:19:30",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → ELDEVODE <elpraise20@gmail.com>",
+    "recipient": "elpraise20@gmail.com"
+  },
+  {
+    "id": "mmt7lmqi30jvu",
+    "timestamp": "3/16/2026, 22:18:27",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Grimaldo.btc <owotubo83@gmail.com>",
+    "recipient": "owotubo83@gmail.com"
+  },
+  {
+    "id": "mmt7k9uzdbwjq",
+    "timestamp": "3/16/2026, 22:17:23",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → morelucks <luckify@example.com>",
+    "recipient": "luckify@example.com"
+  },
+  {
+    "id": "mmt7ihlxm66b2",
+    "timestamp": "3/16/2026, 22:16:00",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → GbolahanAkande <geakande@gmail.com>",
+    "recipient": "geakande@gmail.com"
+  },
+  {
+    "id": "mmt7h4x2i6iyv",
+    "timestamp": "3/16/2026, 22:14:57",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → U <kabufredrick9@gmail.com>",
+    "recipient": "kabufredrick9@gmail.com"
+  },
+  {
+    "id": "mmt7fs2jnl0ba",
+    "timestamp": "3/16/2026, 22:13:54",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → 0xAnoop <singanoop04@gmail.com>",
+    "recipient": "singanoop04@gmail.com"
+  },
+  {
+    "id": "mmt7efellpxwi",
+    "timestamp": "3/16/2026, 22:12:51",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Jon <dictforum@gmail.com>",
+    "recipient": "dictforum@gmail.com"
+  },
+  {
+    "id": "mmt7crgjcvbgu",
+    "timestamp": "3/16/2026, 22:11:33",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Brian <mwaibryn@gmail.com>",
+    "recipient": "mwaibryn@gmail.com"
+  },
+  {
+    "id": "mmt7ay54g3s3q",
+    "timestamp": "3/16/2026, 22:10:08",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → Fearless <bghajiga@gmail.com>",
+    "recipient": "bghajiga@gmail.com"
+  },
+  {
+    "id": "mmt79leiu7ct9",
+    "timestamp": "3/16/2026, 22:09:05",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Giftea <Eleojogiftuhiene@gmail.com>",
+    "recipient": "Eleojogiftuhiene@gmail.com"
+  },
+  {
+    "id": "mmt788qdxbc3n",
+    "timestamp": "3/16/2026, 22:08:02",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Zamir <zamirislamaj00@gmail.com>",
+    "recipient": "zamirislamaj00@gmail.com"
+  },
+  {
+    "id": "mmt76vxc2xgn6",
+    "timestamp": "3/16/2026, 22:06:59",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → novascar <bnishanthtpm06@gmail.com>",
+    "recipient": "bnishanthtpm06@gmail.com"
+  },
+  {
+    "id": "mmt75j4hahrcf",
+    "timestamp": "3/16/2026, 22:05:55",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Zakaria Sisu <zakariasisu5@gmail.com>",
+    "recipient": "zakariasisu5@gmail.com"
+  },
+  {
+    "id": "mmt73qgbazwbo",
+    "timestamp": "3/16/2026, 22:04:32",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → koket5_3 <koketalemayehu537@gmail.com>",
+    "recipient": "koketalemayehu537@gmail.com"
+  },
+  {
+    "id": "mmt72dp89gjvr",
+    "timestamp": "3/16/2026, 22:03:28",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → shubhangisarvade <sarvadeshubhangi@gmail.com>",
+    "recipient": "sarvadeshubhangi@gmail.com"
+  },
+  {
+    "id": "mmt710t7zo1gd",
+    "timestamp": "3/16/2026, 22:02:25",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → syed <syedghufranhassan@gmail.com>",
+    "recipient": "syedghufranhassan@gmail.com"
+  },
+  {
+    "id": "mmt6zo50gvd3f",
+    "timestamp": "3/16/2026, 22:01:22",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → alfset <alfset5@gmail.com>",
+    "recipient": "alfset5@gmail.com"
+  },
+  {
+    "id": "mmt6ybhgswozz",
+    "timestamp": "3/16/2026, 22:00:19",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → hacker952bb59 <mihajlovskyoleg@gmail.com>",
+    "recipient": "mihajlovskyoleg@gmail.com"
+  },
+  {
+    "id": "mmt6wja9okybl",
+    "timestamp": "3/16/2026, 21:58:56",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → Akan <akanimohjohnson2003@gmail.com>",
+    "recipient": "akanimohjohnson2003@gmail.com"
+  },
+  {
+    "id": "mmt6v6erj509m",
+    "timestamp": "3/16/2026, 21:57:52",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Shobhit <shobhit141141@gmail.com>",
+    "recipient": "shobhit141141@gmail.com"
+  },
+  {
+    "id": "mmt6ttr62auvj",
+    "timestamp": "3/16/2026, 21:56:49",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Hatif <md.hatifosmani15@gmail.com>",
+    "recipient": "md.hatifosmani15@gmail.com"
+  },
+  {
+    "id": "mmt6sh4krny53",
+    "timestamp": "3/16/2026, 21:55:46",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → AUSTINLORENZMCCOY <chibuezeaugustine23@gmail.com>",
+    "recipient": "chibuezeaugustine23@gmail.com"
+  },
+  {
+    "id": "mmt6r4gwr5vyb",
+    "timestamp": "3/16/2026, 21:54:43",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Spagero <afolabiayomide870@gmail.com>",
+    "recipient": "afolabiayomide870@gmail.com"
+  },
+  {
+    "id": "mmt6pc2ohgj5w",
+    "timestamp": "3/16/2026, 21:53:20",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → lucky <luckzivanius@gmail.com>",
+    "recipient": "luckzivanius@gmail.com"
+  },
+  {
+    "id": "mmt6nyrm4hafr",
+    "timestamp": "3/16/2026, 21:52:16",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Bradley <johnbradill67@gmail.com>",
+    "recipient": "johnbradill67@gmail.com"
+  },
+  {
+    "id": "mmt6mkwfof9cl",
+    "timestamp": "3/16/2026, 21:51:11",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Aditya <adityapratapsjnhh7654@gmail.com>",
+    "recipient": "adityapratapsjnhh7654@gmail.com"
+  },
+  {
+    "id": "mmt6l616al0k4",
+    "timestamp": "3/16/2026, 21:50:05",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → DaviRain <davirain.yin@gmail.com>",
+    "recipient": "davirain.yin@gmail.com"
+  },
+  {
+    "id": "mmt6jr1j8u0cd",
+    "timestamp": "3/16/2026, 21:48:59",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → alee asghar <earnwithalee@gmail.com>",
+    "recipient": "earnwithalee@gmail.com"
+  },
+  {
+    "id": "mmt6hxunl2m7t",
+    "timestamp": "3/16/2026, 21:47:35",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → rukuboy1997 <djsaffas014@gmail.com>",
+    "recipient": "djsaffas014@gmail.com"
+  },
+  {
+    "id": "mmt6g7khq4hbp",
+    "timestamp": "3/16/2026, 21:46:14",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Manav <manucool123.rich@gmail.com>",
+    "recipient": "manucool123.rich@gmail.com"
+  },
+  {
+    "id": "mmt6euo6szt8e",
+    "timestamp": "3/16/2026, 21:45:11",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → DanielFisseha <developedbydanielfisseha@gmail.com>",
+    "recipient": "developedbydanielfisseha@gmail.com"
+  },
+  {
+    "id": "mmt6dh20lanmo",
+    "timestamp": "3/16/2026, 21:44:06",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → joshuanatanielnm <joshuanmanuputty@gmail.com>",
+    "recipient": "joshuanmanuputty@gmail.com"
+  },
+  {
+    "id": "mmt6c4ahf3i0b",
+    "timestamp": "3/16/2026, 21:43:03",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → 0xshauncodes <srswarup_b21@ce.vjti.ac.in>",
+    "recipient": "srswarup_b21@ce.vjti.ac.in"
+  },
+  {
+    "id": "mmt6abcaucue4",
+    "timestamp": "3/16/2026, 21:41:39",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → last_kryptonian <franqhazard@gmail.com>",
+    "recipient": "franqhazard@gmail.com"
+  },
+  {
+    "id": "mmt68yqqtvmfo",
+    "timestamp": "3/16/2026, 21:40:36",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → fabio kalandra <maulana.fabio@gmail.com>",
+    "recipient": "maulana.fabio@gmail.com"
+  },
+  {
+    "id": "mmt67m42fh6w8",
+    "timestamp": "3/16/2026, 21:39:33",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → OVMARS <ov.alam23@gmail.com>",
+    "recipient": "ov.alam23@gmail.com"
+  },
+  {
+    "id": "mmt6696vn7enw",
+    "timestamp": "3/16/2026, 21:38:30",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → waterreptile19 <sushmitsarmah@gmail.com>",
+    "recipient": "sushmitsarmah@gmail.com"
+  },
+  {
+    "id": "mmt64w6b5ayu8",
+    "timestamp": "3/16/2026, 21:37:26",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Kamilia <kamilia.n.hayati@gmail.com>",
+    "recipient": "kamilia.n.hayati@gmail.com"
+  },
+  {
+    "id": "mmt633zy9n02z",
+    "timestamp": "3/16/2026, 21:36:03",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → bravetitan <olatunbosunoyeleke@hotmail.com>",
+    "recipient": "olatunbosunoyeleke@hotmail.com"
+  },
+  {
+    "id": "mmt61re3w2kfw",
+    "timestamp": "3/16/2026, 21:35:00",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Eben <ebendttl@gmail.com>",
+    "recipient": "ebendttl@gmail.com"
+  },
+  {
+    "id": "mmt60bus98cbg",
+    "timestamp": "3/16/2026, 21:33:53",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Frankie Power <franklin.power21@gmail.com>",
+    "recipient": "franklin.power21@gmail.com"
+  },
+  {
+    "id": "mmt5yz5lij1wn",
+    "timestamp": "3/16/2026, 21:32:50",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → the_3rd <adam.simonini@gmail.com>",
+    "recipient": "adam.simonini@gmail.com"
+  },
+  {
+    "id": "mmt5xmd7l3djl",
+    "timestamp": "3/16/2026, 21:31:47",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → mananuf <kefasiceking@gmail.com>",
+    "recipient": "kefasiceking@gmail.com"
+  },
+  {
+    "id": "mmt5vtuew30aj",
+    "timestamp": "3/16/2026, 21:30:23",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → codediva <urvashirichaagrawal@gmail.com>",
+    "recipient": "urvashirichaagrawal@gmail.com"
+  },
+  {
+    "id": "mmt5uh8pm9yzn",
+    "timestamp": "3/16/2026, 21:29:20",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → E <ochakoeugene67@gmail.com>",
+    "recipient": "ochakoeugene67@gmail.com"
+  },
+  {
+    "id": "mmt5t4lcap2c8",
+    "timestamp": "3/16/2026, 21:28:17",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → AdemFi <adeniranibrahim165@gmail.com>",
+    "recipient": "adeniranibrahim165@gmail.com"
+  },
+  {
+    "id": "mmt5rryz4zla1",
+    "timestamp": "3/16/2026, 21:27:14",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Gungz <agung_sidharta_gungz@yahoo.com>",
+    "recipient": "agung_sidharta_gungz@yahoo.com"
+  },
+  {
+    "id": "mmt5qfbvmc4k7",
+    "timestamp": "3/16/2026, 21:26:11",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → hacker4e03d3d <praiseokere2007@gmail.com>",
+    "recipient": "praiseokere2007@gmail.com"
+  },
+  {
+    "id": "mmt5om395m3n5",
+    "timestamp": "3/16/2026, 21:24:47",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → Punith B M <punith@surge.build>",
+    "recipient": "punith@surge.build"
+  },
+  {
+    "id": "mmt5n8vlbzolv",
+    "timestamp": "3/16/2026, 21:23:43",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → ayushsrivastava <ayushsrivas55@gmail.com>",
+    "recipient": "ayushsrivas55@gmail.com"
+  },
+  {
+    "id": "mmt5lw6uv0ns8",
+    "timestamp": "3/16/2026, 21:22:40",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Blockchain <blockchainoracle.dev@gmail.com>",
+    "recipient": "blockchainoracle.dev@gmail.com"
+  },
+  {
+    "id": "mmt5kjf0v559u",
+    "timestamp": "3/16/2026, 21:21:36",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → hacker_amd <michojekunle1@gmail.com>",
+    "recipient": "michojekunle1@gmail.com"
+  },
+  {
+    "id": "mmt5iupgyd4ri",
+    "timestamp": "3/16/2026, 21:20:18",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Madhav <guptamadhav2828@gmail.com>",
+    "recipient": "guptamadhav2828@gmail.com"
+  },
+  {
+    "id": "mmt5h2m30q5vo",
+    "timestamp": "3/16/2026, 21:18:55",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → Adwait <adwaitkeshari289@gmail.com>",
+    "recipient": "adwaitkeshari289@gmail.com"
+  },
+  {
+    "id": "mmt5fpvp4y7ix",
+    "timestamp": "3/16/2026, 21:17:52",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Gbangbolaoluwagbemiga <oluwagbemigagbangbola@gmail.com>",
+    "recipient": "oluwagbemigagbangbola@gmail.com"
+  },
+  {
+    "id": "mmt5ed7h182if",
+    "timestamp": "3/16/2026, 21:16:48",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → TisaneFruitRouge <vincent.wendling@lilo.org>",
+    "recipient": "vincent.wendling@lilo.org"
+  },
+  {
+    "id": "mmt5d0j32trse",
+    "timestamp": "3/16/2026, 21:15:45",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → DeOrganized <deorganizedshow@gmail.com>",
+    "recipient": "deorganizedshow@gmail.com"
+  },
+  {
+    "id": "mmt5bnsk3nb4h",
+    "timestamp": "3/16/2026, 21:14:42",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Dhruv Singh <dhruvsinghsir@gmail.com>",
+    "recipient": "dhruvsinghsir@gmail.com"
+  },
+  {
+    "id": "mmt59vgi4vw5a",
+    "timestamp": "3/16/2026, 21:13:19",
+    "level": "info",
+    "message": "🚀 Started — 84 recipients remaining | Category: \"Upland-first-try\" | 5 templates | Interval: 60s",
+    "recipient": null
+  },
+  {
+    "id": "mmt56z5fz9f58",
+    "timestamp": "3/16/2026, 21:11:04",
+    "level": "info",
+    "message": "🛑 Scheduler stopped — progress saved (10/94)",
+    "recipient": null
+  },
+  {
+    "id": "mmt564z6500kh",
+    "timestamp": "3/16/2026, 21:10:25",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → Godspower ufot <ufotgodspower8@gmail.com>",
+    "recipient": "ufotgodspower8@gmail.com"
+  },
+  {
+    "id": "mmt54sbmctxvz",
+    "timestamp": "3/16/2026, 21:09:22",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → sumonxzone <isumon111@gmail.com>",
+    "recipient": "isumon111@gmail.com"
+  },
+  {
+    "id": "mmt533dmsjdyv",
+    "timestamp": "3/16/2026, 21:08:03",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Flames <isaacomenuche@gmail.com>",
+    "recipient": "isaacomenuche@gmail.com"
+  },
+  {
+    "id": "mmt518klc696f",
+    "timestamp": "3/16/2026, 21:06:36",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → hacker66a32c0 <jefazodefuego@gmail.com>",
+    "recipient": "jefazodefuego@gmail.com"
+  },
+  {
+    "id": "mmt4zvwz1di51",
+    "timestamp": "3/16/2026, 21:05:33",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → beranalpa <beranalpa@gmail.com>",
+    "recipient": "beranalpa@gmail.com"
+  },
+  {
+    "id": "mmt4yja09i9jc",
+    "timestamp": "3/16/2026, 21:04:30",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → Rizky Reza <business@rizkyreza.fun>",
+    "recipient": "business@rizkyreza.fun"
+  },
+  {
+    "id": "mmt4x6kw624mn",
+    "timestamp": "3/16/2026, 21:03:27",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Zen <zenieverse@gmail.com>",
+    "recipient": "zenieverse@gmail.com"
+  },
+  {
+    "id": "mmt4vtgdcde63",
+    "timestamp": "3/16/2026, 21:02:23",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Zeeee <zarahgathoni76@gmail.com>",
+    "recipient": "zarahgathoni76@gmail.com"
+  },
+  {
+    "id": "mmt4u16tfujd1",
+    "timestamp": "3/16/2026, 21:01:00",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Psalmuel01 <dahunsisamuel1st@gmail.com>",
+    "recipient": "dahunsisamuel1st@gmail.com"
+  },
+  {
+    "id": "mmt4sokveabp7",
+    "timestamp": "3/16/2026, 20:59:57",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Dumitru <dumitruilie65@outlook.com>",
+    "recipient": "dumitruilie65@outlook.com"
+  },
+  {
+    "id": "mmt4sm8kcr1jp",
+    "timestamp": "3/16/2026, 20:59:54",
+    "level": "info",
+    "message": "🚀 Started — 94 recipients remaining | Category: \"Upland-first-try\" | 5 templates | Interval: 60s",
+    "recipient": null
+  },
+  {
+    "id": "mmt4sjru7f1u5",
+    "timestamp": "3/16/2026, 20:59:51",
+    "level": "info",
+    "message": "📋 Loaded 94 recipients from \"dorahacks-buidlbattle2-1773621583672-email.xlsx\" (0 invalid rows skipped)",
+    "recipient": null
+  },
+  {
+    "id": "mmt4qxefyfnas",
+    "timestamp": "3/16/2026, 20:58:35",
+    "level": "info",
+    "message": "🗑 Recipient list cleared.",
+    "recipient": null
+  },
+  {
+    "id": "mmt4qnskrzqqx",
+    "timestamp": "3/16/2026, 20:58:22",
+    "level": "info",
+    "message": "🛑 Scheduler stopped — progress saved (1/94)",
+    "recipient": null
+  },
+  {
+    "id": "mmt4puc4w174c",
+    "timestamp": "3/16/2026, 20:57:44",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Dumitru <dumitruilie65@outlook.com>",
+    "recipient": "dumitruilie65@outlook.com"
+  },
+  {
+    "id": "mmt4prmib9uf4",
+    "timestamp": "3/16/2026, 20:57:41",
+    "level": "info",
+    "message": "🚀 Started — 94 recipients remaining | Category: \"Upland-first-try\" | 5 templates | Interval: 60s",
+    "recipient": null
+  },
+  {
+    "id": "mmt4poravfoal",
+    "timestamp": "3/16/2026, 20:57:37",
+    "level": "info",
+    "message": "📋 Loaded 94 recipients from \"dorahacks-buidlbattle2-1773621583672-email.xlsx\" (0 invalid rows skipped)",
+    "recipient": null
+  },
+  {
+    "id": "mmt4o5q9wusx9",
+    "timestamp": "3/16/2026, 20:56:26",
+    "level": "info",
+    "message": "🗑 Recipient list cleared.",
+    "recipient": null
+  },
+  {
+    "id": "mmt4o285s71uv",
+    "timestamp": "3/16/2026, 20:56:21",
+    "level": "info",
+    "message": "🛑 Scheduler stopped — progress saved (1/94)",
+    "recipient": null
+  },
+  {
+    "id": "mmt4noy6k4bj6",
+    "timestamp": "3/16/2026, 20:56:04",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Dumitru <dumitruilie65@outlook.com>",
+    "recipient": "dumitruilie65@outlook.com"
+  },
+  {
+    "id": "mmt4n6cczn9id",
+    "timestamp": "3/16/2026, 20:55:40",
+    "level": "info",
+    "message": "🚀 Started — 94 recipients remaining | Category: \"Upland-first-try\" | 5 templates | Interval: 60s",
+    "recipient": null
+  },
+  {
+    "id": "mmt4mu83hw1j5",
+    "timestamp": "3/16/2026, 20:55:24",
+    "level": "info",
+    "message": "📋 Loaded 94 recipients from \"dorahacks-buidlbattle2-1773621583672-email.xlsx\" (0 invalid rows skipped)",
+    "recipient": null
+  },
+  {
+    "id": "mmt4mp6fim45f",
+    "timestamp": "3/16/2026, 20:55:18",
+    "level": "info",
+    "message": "🗑 Recipient list cleared.",
+    "recipient": null
+  },
+  {
+    "id": "mmskzaro0ndb8",
+    "timestamp": "3/16/2026, 11:45:13",
+    "level": "info",
+    "message": "🛑 Scheduler stopped — progress saved (89/182)",
+    "recipient": null
+  },
+  {
+    "id": "mmsky2m183o24",
+    "timestamp": "3/16/2026, 11:44:16",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Shreyas <shreyassp002@gmail.com>",
+    "recipient": "shreyassp002@gmail.com"
+  },
+  {
+    "id": "mmskwpznc9jux",
+    "timestamp": "3/16/2026, 11:43:13",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → psychemist <ikeagudike@gmail.com>",
+    "recipient": "ikeagudike@gmail.com"
+  },
+  {
+    "id": "mmskvddri2nf2",
+    "timestamp": "3/16/2026, 11:42:10",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Debanjannnn <debanjanmondalk2005@gmail.com>",
+    "recipient": "debanjanmondalk2005@gmail.com"
+  },
+  {
+    "id": "mmsku0r7oaxud",
+    "timestamp": "3/16/2026, 11:41:07",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → haikukoten <realsaumyainc@gmail.com>",
+    "recipient": "realsaumyainc@gmail.com"
+  },
+  {
+    "id": "mmsks8msu8d7x",
+    "timestamp": "3/16/2026, 11:39:44",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → leprofcode <inno.okeke@outlook.com>",
+    "recipient": "inno.okeke@outlook.com"
+  },
+  {
+    "id": "mmskqw0r6xt1r",
+    "timestamp": "3/16/2026, 11:38:41",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Daksh <2dakshjoshi4@gmail.com>",
+    "recipient": "2dakshjoshi4@gmail.com"
+  },
+  {
+    "id": "mmskpjensbcio",
+    "timestamp": "3/16/2026, 11:37:38",
+    "level": "error",
+    "message": "[Template 3 — Ultra Short / Chatty] ✗ caxtonacollins <caxtonacollins@gmail.com>: Can't send mail - all recipients were rejected: 450 4.7.1 <caxtonacollins@gmail.com>: Recipient address rejected: Policy Rejection- Sending limit reached - outgoing message count, recipient count, or outgoing message total size. Please try again later.",
+    "recipient": "caxtonacollins@gmail.com"
+  },
+  {
+    "id": "mmsko7euy6q2i",
+    "timestamp": "3/16/2026, 11:36:36",
+    "level": "error",
+    "message": "[Template 2 — Casual & Personal] ✗ Evans <snaveqiptoo@gmail.com>: Can't send mail - all recipients were rejected: 450 4.7.1 <snaveqiptoo@gmail.com>: Recipient address rejected: Policy Rejection- Sending limit reached - outgoing message count, recipient count, or outgoing message total size. Please try again later.",
+    "recipient": "snaveqiptoo@gmail.com"
+  },
+  {
+    "id": "mmskmvembkwj3",
+    "timestamp": "3/16/2026, 11:35:33",
+    "level": "error",
+    "message": "[Template 1 — Friendly & Chatty] ✗ dominoz000 <abhishekkhandare529@gmail.com>: Can't send mail - all recipients were rejected: 450 4.7.1 <abhishekkhandare529@gmail.com>: Recipient address rejected: Policy Rejection- Sending limit reached - outgoing message count, recipient count, or outgoing message total size. Please try again later.",
+    "recipient": "abhishekkhandare529@gmail.com"
+  },
+  {
+    "id": "mmskl3qh7jo61",
+    "timestamp": "3/16/2026, 11:34:11",
+    "level": "error",
+    "message": "[Template 5 — Casual Director Tone] ✗ Tuhin810 <tuhin.thakur1233@gmail.com>: Can't send mail - all recipients were rejected: 450 4.7.1 <tuhin.thakur1233@gmail.com>: Recipient address rejected: Policy Rejection- Sending limit reached - outgoing message count, recipient count, or outgoing message total size. Please try again later.",
+    "recipient": "tuhin.thakur1233@gmail.com"
+  },
+  {
+    "id": "mmskjrpxx1sa1",
+    "timestamp": "3/16/2026, 11:33:09",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → serayd61 <serayd61@hotmail.com>",
+    "recipient": "serayd61@hotmail.com"
+  },
+  {
+    "id": "mmskif48hfuk2",
+    "timestamp": "3/16/2026, 11:32:06",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → DevQueen <oyingrace307@gmail.com>",
+    "recipient": "oyingrace307@gmail.com"
+  },
+  {
+    "id": "mmskh2ilvxf85",
+    "timestamp": "3/16/2026, 11:31:03",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Tuan Pham Minh <tuanpmhd@gmail.com>",
+    "recipient": "tuanpmhd@gmail.com"
+  },
+  {
+    "id": "mmskfppm86ond",
+    "timestamp": "3/16/2026, 11:29:59",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Timothy <tchimbiv@gmail.com>",
+    "recipient": "tchimbiv@gmail.com"
+  },
+  {
+    "id": "mmskdxj0uh7ep",
+    "timestamp": "3/16/2026, 11:28:36",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → Akash Biswas <akash8860biswas@gmail.com>",
+    "recipient": "akash8860biswas@gmail.com"
+  },
+  {
+    "id": "mmskckxbz1dsc",
+    "timestamp": "3/16/2026, 11:27:33",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → mokayaj857 <6940.2021@students.ku.ac.ke>",
+    "recipient": "6940.2021@students.ku.ac.ke"
+  },
+  {
+    "id": "mmskb8bsmqcdk",
+    "timestamp": "3/16/2026, 11:26:30",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Chad On Chain <prathamkodeyt@gmail.com>",
+    "recipient": "prathamkodeyt@gmail.com"
+  },
+  {
+    "id": "mmsk9vqdmfejh",
+    "timestamp": "3/16/2026, 11:25:27",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → 0xhaz <hazrienne@gmail.com>",
+    "recipient": "hazrienne@gmail.com"
+  },
+  {
+    "id": "mmsk8j4lwhdlf",
+    "timestamp": "3/16/2026, 11:24:24",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Aryan yadav <aryansinghyadav2002ok@gmail.com>",
+    "recipient": "aryansinghyadav2002ok@gmail.com"
+  },
+  {
+    "id": "mmsk6qy402u9x",
+    "timestamp": "3/16/2026, 11:23:01",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → WISEONExyz <oluwaseunariyibi01@gmail.com>",
+    "recipient": "oluwaseunariyibi01@gmail.com"
+  },
+  {
+    "id": "mmsk5ebvhkajo",
+    "timestamp": "3/16/2026, 11:21:58",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Bima Jadiva <plusgepeteh@gmail.com>",
+    "recipient": "plusgepeteh@gmail.com"
+  },
+  {
+    "id": "mmsk41hdlt9fn",
+    "timestamp": "3/16/2026, 11:20:55",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Henry6262 <enriquemiloslavov11@gmail.com>",
+    "recipient": "enriquemiloslavov11@gmail.com"
+  },
+  {
+    "id": "mmsk2ovcukua8",
+    "timestamp": "3/16/2026, 11:19:52",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → code <justharsh2407@gmail.com>",
+    "recipient": "justharsh2407@gmail.com"
+  },
+  {
+    "id": "mmsk1c68cmpv4",
+    "timestamp": "3/16/2026, 11:18:49",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → OctavioRamirez10 <octaarami@gmail.com>",
+    "recipient": "octaarami@gmail.com"
+  },
+  {
+    "id": "mmsjzk0m0aksq",
+    "timestamp": "3/16/2026, 11:17:26",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → Achthar <achim.huebl@gmail.com>",
+    "recipient": "achim.huebl@gmail.com"
+  },
+  {
+    "id": "mmsjy7ewf83nn",
+    "timestamp": "3/16/2026, 11:16:23",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Suhas Dasari <suhas.dasari194@gmail.com>",
+    "recipient": "suhas.dasari194@gmail.com"
+  },
+  {
+    "id": "mmsjwut11nqmi",
+    "timestamp": "3/16/2026, 11:15:20",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → manoahLinks <manoahluka@gmail.com>",
+    "recipient": "manoahluka@gmail.com"
+  },
+  {
+    "id": "mmsjvi7a7gkse",
+    "timestamp": "3/16/2026, 11:14:17",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → mr <writetoharshtyagi@gmail.com>",
+    "recipient": "writetoharshtyagi@gmail.com"
+  },
+  {
+    "id": "mmsju5lfuklxk",
+    "timestamp": "3/16/2026, 11:13:14",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → pisuthd <pisuth.dae@gmail.com>",
+    "recipient": "pisuth.dae@gmail.com"
+  },
+  {
+    "id": "mmsjsdepxy004",
+    "timestamp": "3/16/2026, 11:11:50",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → jmgomezl <jmgomezl@unal.edu.co>",
+    "recipient": "jmgomezl@unal.edu.co"
+  },
+  {
+    "id": "mmsjr0ror4c2m",
+    "timestamp": "3/16/2026, 11:10:47",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Sukanto Das <sukanto01899@gmail.com>",
+    "recipient": "sukanto01899@gmail.com"
+  },
+  {
+    "id": "mmsjpo3ocmaz4",
+    "timestamp": "3/16/2026, 11:09:44",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Cat McGee <hello@mcgee.cat>",
+    "recipient": "hello@mcgee.cat"
+  },
+  {
+    "id": "mmsjobdwyyhbr",
+    "timestamp": "3/16/2026, 11:08:41",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Dexton <ezrakewa3@gmail.com>",
+    "recipient": "ezrakewa3@gmail.com"
+  },
+  {
+    "id": "mmsjmyrol3kmm",
+    "timestamp": "3/16/2026, 11:07:38",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Wizbisy <wizbisy@gmail.com>",
+    "recipient": "wizbisy@gmail.com"
+  },
+  {
+    "id": "mmsjl6lydo5re",
+    "timestamp": "3/16/2026, 11:06:15",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → Barath Sunkireddy <sunkireddybarath07@gmail.com>",
+    "recipient": "sunkireddybarath07@gmail.com"
+  },
+  {
+    "id": "mmsjju07ey9qw",
+    "timestamp": "3/16/2026, 11:05:12",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Favour George <georgefavour694@gmail.com>",
+    "recipient": "georgefavour694@gmail.com"
+  },
+  {
+    "id": "mmsjihesy1e5x",
+    "timestamp": "3/16/2026, 11:04:09",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Telixgoldens <haripzy05@gmail.com>",
+    "recipient": "haripzy05@gmail.com"
+  },
+  {
+    "id": "mmsjh4rn3mobr",
+    "timestamp": "3/16/2026, 11:03:06",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → DevHenryno111 <h.agukwe@yahoo.com>",
+    "recipient": "h.agukwe@yahoo.com"
+  },
+  {
+    "id": "mmsjfrxnd3ydr",
+    "timestamp": "3/16/2026, 11:02:03",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → hacker62cf425 <diveshkumar.s007@gmail.com>",
+    "recipient": "diveshkumar.s007@gmail.com"
+  },
+  {
+    "id": "mmsjdzenyiynl",
+    "timestamp": "3/16/2026, 11:00:39",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → Mansi <yadavmansi0111207@gmail.com>",
+    "recipient": "yadavmansi0111207@gmail.com"
+  },
+  {
+    "id": "mmsjcmssuwjd4",
+    "timestamp": "3/16/2026, 10:59:36",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Tim <timjosh507@gmail.com>",
+    "recipient": "timjosh507@gmail.com"
+  },
+  {
+    "id": "mmsjba6zk5ds6",
+    "timestamp": "3/16/2026, 10:58:33",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → 0x_Zaid10 <soltrader101@gmail.com>",
+    "recipient": "soltrader101@gmail.com"
+  },
+  {
+    "id": "mmsj9xkfvbs8y",
+    "timestamp": "3/16/2026, 10:57:30",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → 0xSY3 <04syee@gmail.com>",
+    "recipient": "04syee@gmail.com"
+  },
+  {
+    "id": "mmsj8khq6x3w3",
+    "timestamp": "3/16/2026, 10:56:26",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Kartik Tyagi <lucifergrey1017@gmail.com>",
+    "recipient": "lucifergrey1017@gmail.com"
+  },
+  {
+    "id": "mmsj6sbmtdhog",
+    "timestamp": "3/16/2026, 10:55:03",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → lorrre19 <lorena.balea19@gmail.com>",
+    "recipient": "lorena.balea19@gmail.com"
+  },
+  {
+    "id": "mmsj5fom0yy5w",
+    "timestamp": "3/16/2026, 10:54:00",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Emmanuel <okoyeemmanuel998@gmail.com>",
+    "recipient": "okoyeemmanuel998@gmail.com"
+  },
+  {
+    "id": "mmsj4301ozu9d",
+    "timestamp": "3/16/2026, 10:52:57",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → cheeseee <24bce021@nith.ac.in>",
+    "recipient": "24bce021@nith.ac.in"
+  },
+  {
+    "id": "mmsj2qahl97on",
+    "timestamp": "3/16/2026, 10:51:54",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → ritwikareddykancharla <ritwikareddykancharla@gmail.com>",
+    "recipient": "ritwikareddykancharla@gmail.com"
+  },
+  {
+    "id": "mmsj1dnifaz89",
+    "timestamp": "3/16/2026, 10:50:51",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Ge0frey <jeffkimzyjoe@gmail.com>",
+    "recipient": "jeffkimzyjoe@gmail.com"
+  },
+  {
+    "id": "mmsizlb9cfhqz",
+    "timestamp": "3/16/2026, 10:49:28",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → asamarsal <asamarsal@gmail.com>",
+    "recipient": "asamarsal@gmail.com"
+  },
+  {
+    "id": "mmsiy8pdfqar0",
+    "timestamp": "3/16/2026, 10:48:25",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → PranayHaldiya <pranayhaldiya8127@gmail.com>",
+    "recipient": "pranayhaldiya8127@gmail.com"
+  },
+  {
+    "id": "mmsiww3f2x086",
+    "timestamp": "3/16/2026, 10:47:22",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Sayae <itodosimonitodo1@gmail.com>",
+    "recipient": "itodosimonitodo1@gmail.com"
+  },
+  {
+    "id": "mmsivjhh72lw6",
+    "timestamp": "3/16/2026, 10:46:19",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → jim.btc <stxtrata@gmail.com>",
+    "recipient": "stxtrata@gmail.com"
+  },
+  {
+    "id": "mmsiu6vrctv70",
+    "timestamp": "3/16/2026, 10:45:16",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → nayangoje <nayangoje2812@gmail.com>",
+    "recipient": "nayangoje2812@gmail.com"
+  },
+  {
+    "id": "mmsiselqdrm4j",
+    "timestamp": "3/16/2026, 10:43:52",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → hacker07 <naveenkumarat24@gmail.com>",
+    "recipient": "naveenkumarat24@gmail.com"
+  },
+  {
+    "id": "mmsiqq4bdek1g",
+    "timestamp": "3/16/2026, 10:42:34",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → abbasmir12 <abbasmirgit12@gmail.com>",
+    "recipient": "abbasmirgit12@gmail.com"
+  },
+  {
+    "id": "mmsipdiu9phwz",
+    "timestamp": "3/16/2026, 10:41:31",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → hacker5b776c8 <alfisyahril.vire1886@gmail.com>",
+    "recipient": "alfisyahril.vire1886@gmail.com"
+  },
+  {
+    "id": "mmsio0x9ls97a",
+    "timestamp": "3/16/2026, 10:40:28",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → prateush Sharma <prateushsharma@gmail.com>",
+    "recipient": "prateushsharma@gmail.com"
+  },
+  {
+    "id": "mmsimobdazlqz",
+    "timestamp": "3/16/2026, 10:39:25",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Abuchtela U_1d212221932a06 <amberbuchtela@gmail.com>",
+    "recipient": "amberbuchtela@gmail.com"
+  },
+  {
+    "id": "mmsikw279b0sh",
+    "timestamp": "3/16/2026, 10:38:02",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → Maneek <maneekblaze@gmail.com>",
+    "recipient": "maneekblaze@gmail.com"
+  },
+  {
+    "id": "mmsijjg4ld4ps",
+    "timestamp": "3/16/2026, 10:36:59",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → hacker69f6455 <isabelapaivanovais@gmail.com>",
+    "recipient": "isabelapaivanovais@gmail.com"
+  },
+  {
+    "id": "mmsii6tu3q4ux",
+    "timestamp": "3/16/2026, 10:35:56",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Akshaya <itz.akshaya001@gmail.com>",
+    "recipient": "itz.akshaya001@gmail.com"
+  },
+  {
+    "id": "mmsigu8781stx",
+    "timestamp": "3/16/2026, 10:34:53",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → faithful1ofall <faithful1ofall@gmail.com>",
+    "recipient": "faithful1ofall@gmail.com"
+  },
+  {
+    "id": "mmsifhm2g6jht",
+    "timestamp": "3/16/2026, 10:33:50",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → hacker_yugandhar <tripathi.yugandhar@gmail.com>",
+    "recipient": "tripathi.yugandhar@gmail.com"
+  },
+  {
+    "id": "mmsidbt7tlh12",
+    "timestamp": "3/16/2026, 10:32:09",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → PredPred <a@predp.red>",
+    "recipient": "a@predp.red"
+  },
+  {
+    "id": "mmsibz7bv8j2y",
+    "timestamp": "3/16/2026, 10:31:06",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → codingsh <codingsh@pm.me>",
+    "recipient": "codingsh@pm.me"
+  },
+  {
+    "id": "mmsiamlh7il9k",
+    "timestamp": "3/16/2026, 10:30:03",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → 0xmkar <omkarjadhav2103@gmail.com>",
+    "recipient": "omkarjadhav2103@gmail.com"
+  },
+  {
+    "id": "mmsi99z73ftep",
+    "timestamp": "3/16/2026, 10:29:00",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → okekefrancis112 <okeke98@gmail.com>",
+    "recipient": "okeke98@gmail.com"
+  },
+  {
+    "id": "mmsi7xdi0lk75",
+    "timestamp": "3/16/2026, 10:27:57",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → pramadanif <bavaguvus01@gmail.com>",
+    "recipient": "bavaguvus01@gmail.com"
+  },
+  {
+    "id": "mmsi655yq495y",
+    "timestamp": "3/16/2026, 10:26:34",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → w3dada <wadadawadada@yandex.ru>",
+    "recipient": "wadadawadada@yandex.ru"
+  },
+  {
+    "id": "mmsi4sjnlkriv",
+    "timestamp": "3/16/2026, 10:25:31",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Daniel Odinegun <danielodingz@gmail.com>",
+    "recipient": "danielodingz@gmail.com"
+  },
+  {
+    "id": "mmsi3fx1zmlg0",
+    "timestamp": "3/16/2026, 10:24:28",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Chronique <adhi.chronique@gmail.com>",
+    "recipient": "adhi.chronique@gmail.com"
+  },
+  {
+    "id": "mmsi23awd2rp2",
+    "timestamp": "3/16/2026, 10:23:25",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Anubhav Singh <anumukul009@gmail.com>",
+    "recipient": "anumukul009@gmail.com"
+  },
+  {
+    "id": "mmsi0qhqozk8w",
+    "timestamp": "3/16/2026, 10:22:21",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Rogersterkaa <rogersterkaa@gmail.com>",
+    "recipient": "rogersterkaa@gmail.com"
+  },
+  {
+    "id": "mmshyy8w9gzuz",
+    "timestamp": "3/16/2026, 10:20:58",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → ashwini <ashwinipal@tantragya.in>",
+    "recipient": "ashwinipal@tantragya.in"
+  },
+  {
+    "id": "mmshxln301c24",
+    "timestamp": "3/16/2026, 10:19:55",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → Nakshatra <naksh7914@gmail.com>",
+    "recipient": "naksh7914@gmail.com"
+  },
+  {
+    "id": "mmshw910itmkp",
+    "timestamp": "3/16/2026, 10:18:52",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → hacker6c8dcff <adityapratapsjnhh7654@gmail.com>",
+    "recipient": "adityapratapsjnhh7654@gmail.com"
+  },
+  {
+    "id": "mmshuwdtbyqce",
+    "timestamp": "3/16/2026, 10:17:49",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Shyam <shyambhalodiya14@gmail.com>",
+    "recipient": "shyambhalodiya14@gmail.com"
+  },
+  {
+    "id": "mmshtjpw61e5a",
+    "timestamp": "3/16/2026, 10:16:46",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → thefifthdev <thefifthdev@gmail.com>",
+    "recipient": "thefifthdev@gmail.com"
+  },
+  {
+    "id": "mmshrrknjg21j",
+    "timestamp": "3/16/2026, 10:15:23",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → Adejoke <akinolaa769@gmail.com>",
+    "recipient": "akinolaa769@gmail.com"
+  },
+  {
+    "id": "mmshqexo036dk",
+    "timestamp": "3/16/2026, 10:14:20",
+    "level": "error",
+    "message": "[Template 4 — Conversational / Project-Focused] ✗ Faruukku <rexzivyson@gmail.com>: Connection timeout",
+    "recipient": "rexzivyson@gmail.com"
+  },
+  {
+    "id": "mmshot20pneki",
+    "timestamp": "3/16/2026, 10:13:05",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → raficostar <rapha@fontainebleau-management.com>",
+    "recipient": "rapha@fontainebleau-management.com"
+  },
+  {
+    "id": "mmshngfu58bus",
+    "timestamp": "3/16/2026, 10:12:02",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Himanshu Soni <h30s.soni@gmail.com>",
+    "recipient": "h30s.soni@gmail.com"
+  },
+  {
+    "id": "mmshm3u58w5qh",
+    "timestamp": "3/16/2026, 10:10:59",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → KAI <kaijinng@gmail.com>",
+    "recipient": "kaijinng@gmail.com"
+  },
+  {
+    "id": "mmshkbprkoing",
+    "timestamp": "3/16/2026, 10:09:36",
+    "level": "success",
+    "message": "[Template 5 — Casual Director Tone] → N DIVIJ <ndivij2004@gmail.com>",
+    "recipient": "ndivij2004@gmail.com"
+  },
+  {
+    "id": "mmshiz3xv1q3y",
+    "timestamp": "3/16/2026, 10:08:33",
+    "level": "success",
+    "message": "[Template 4 — Conversational / Project-Focused] → webnai <wilbertboadzo144@gmail.com>",
+    "recipient": "wilbertboadzo144@gmail.com"
+  },
+  {
+    "id": "mmshhmi7m826n",
+    "timestamp": "3/16/2026, 10:07:30",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Kevin Bravo <bravokevinto@gmail.com>",
+    "recipient": "bravokevinto@gmail.com"
+  },
+  {
+    "id": "mmshg9wrzlzwg",
+    "timestamp": "3/16/2026, 10:06:27",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Frostkidlone <freshboykinky@gmail.com>",
+    "recipient": "freshboykinky@gmail.com"
+  },
+  {
+    "id": "mmshexaxkbw7j",
+    "timestamp": "3/16/2026, 10:05:24",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Dumitru <dumitruilie65@outlook.com>",
+    "recipient": "dumitruilie65@outlook.com"
+  },
+  {
+    "id": "mmshefgtrhb8h",
+    "timestamp": "3/16/2026, 10:05:01",
+    "level": "info",
+    "message": "🚀 Started — 182 recipients remaining | Category: \"Upland-first-try\" | 5 templates | Interval: 60s",
+    "recipient": null
+  },
+  {
+    "id": "mmshd1cqtrrz5",
+    "timestamp": "3/16/2026, 10:03:56",
+    "level": "info",
+    "message": "📋 Loaded 182 recipients from \"dorahacks-buidlbattle2-1773621583672-email.xlsx\" (0 invalid rows skipped)",
+    "recipient": null
+  },
+  {
+    "id": "mmshcs4oz5yey",
+    "timestamp": "3/16/2026, 10:03:44",
+    "level": "info",
+    "message": "🗑 Recipient list cleared.",
+    "recipient": null
+  },
+  {
+    "id": "mmshcojrnoqco",
+    "timestamp": "3/16/2026, 10:03:39",
+    "level": "info",
+    "message": "🛑 Scheduler stopped — progress saved (3/182)",
+    "recipient": null
+  },
+  {
+    "id": "mmshbqzm02mra",
+    "timestamp": "3/16/2026, 10:02:56",
+    "level": "success",
+    "message": "[Template 3 — Ultra Short / Chatty] → Kevin Bravo <bravokevinto@gmail.com>",
+    "recipient": "bravokevinto@gmail.com"
+  },
+  {
+    "id": "mmshadymqgboq",
+    "timestamp": "3/16/2026, 10:01:52",
+    "level": "success",
+    "message": "[Template 2 — Casual & Personal] → Frostkidlone <freshboykinky@gmail.com>",
+    "recipient": "freshboykinky@gmail.com"
+  },
+  {
+    "id": "mmsh91c5jnrp3",
+    "timestamp": "3/16/2026, 10:00:49",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Dumitru <dumitruilie65@outlook.com>",
+    "recipient": "dumitruilie65@outlook.com"
+  },
+  {
+    "id": "mmsh8ynappofm",
+    "timestamp": "3/16/2026, 10:00:46",
+    "level": "info",
+    "message": "🚀 Started — 182 recipients remaining | Category: \"Upland-first-try\" | 5 templates | Interval: 60s",
+    "recipient": null
+  },
+  {
+    "id": "mmsh8u5qmt71h",
+    "timestamp": "3/16/2026, 10:00:40",
+    "level": "info",
+    "message": "📋 Loaded 182 recipients from \"dorahacks-buidlbattle2-1773621583672-email.xlsx\" (0 invalid rows skipped)",
+    "recipient": null
+  },
+  {
+    "id": "mmsh8a30mplr8",
+    "timestamp": "3/16/2026, 10:00:14",
+    "level": "info",
+    "message": "🗑 Recipient list cleared.",
+    "recipient": null
+  },
+  {
+    "id": "mmsh84v2m2hz0",
+    "timestamp": "3/16/2026, 10:00:07",
+    "level": "info",
+    "message": "🛑 Scheduler stopped — progress saved (1/182)",
+    "recipient": null
+  },
+  {
+    "id": "mmsh7wrqnwwow",
+    "timestamp": "3/16/2026, 09:59:56",
+    "level": "info",
+    "message": "🚀 Started — 181 recipients remaining | Category: \"Upland-first-try\" | 5 templates | Interval: 60s",
+    "recipient": null
+  },
+  {
+    "id": "mmsh6uhqgzqiu",
+    "timestamp": "3/16/2026, 09:59:07",
+    "level": "info",
+    "message": "🛑 Scheduler stopped — progress saved (1/182)",
+    "recipient": null
+  },
+  {
+    "id": "mmsh6qi6o5m3f",
+    "timestamp": "3/16/2026, 09:59:02",
+    "level": "success",
+    "message": "[Template 1 — Friendly & Chatty] → Dumitru <dumitruilie65@outlook.com>",
+    "recipient": "dumitruilie65@outlook.com"
+  },
+  {
+    "id": "mmsh675kis5mi",
+    "timestamp": "3/16/2026, 09:58:37",
+    "level": "info",
+    "message": "🚀 Started — 182 recipients remaining | Category: \"Upland-first-try\" | 5 templates | Interval: 10s",
+    "recipient": null
+  },
+  {
+    "id": "mmsh5pdw986j7",
+    "timestamp": "3/16/2026, 09:58:14",
+    "level": "info",
+    "message": "📋 Loaded 182 recipients from \"dorahacks-buidlbattle2-1773621583672-email.xlsx\" (0 invalid rows skipped)",
+    "recipient": null
+  },
+  {
     "id": "mmp2geirjd13z",
     "timestamp": "3/14/2026, 00:43:20",
     "level": "info",
